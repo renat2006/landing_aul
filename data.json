@@ -1,0 +1,223 @@
+{
+  "team": {
+    "name": "IT-AUL",
+    "description": "Команда из 6 профессиональных разработчиков с опытом участия в хакатонах",
+    "motto": "Проблематика → Решения",
+    "stats": {
+      "projects": 7,
+      "developers": 7,
+      "hackathons": 9,
+      "yearsExperience": 3
+    }
+  },
+  "services": [
+    {
+      "id": 1,
+      "icon": "🌐",
+      "title": "Веб-разработка",
+      "description": "Создаем современные, быстрые и адаптивные веб-сайты с использованием последних технологий",
+      "technologies": ["React", "JavaScript", "Next.js", "PWA", "Адаптивный дизайн"],
+      "price": "от 50,000 ₽"
+    },
+    {
+      "id": 2,
+      "icon": "📱",
+      "title": "Мобильные приложения",
+      "description": "Разрабатываем кроссплатформенные мобильные приложения для iOS и Android",
+      "technologies": ["React Native", "PWA", "Кроссплатформенная разработка"],
+      "price": "от 80,000 ₽"
+    },
+    {
+      "id": 3,
+      "icon": "⚡",
+      "title": "MVP и прототипы",
+      "description": "Быстрая разработка минимально жизнеспособных продуктов для стартапов",
+      "technologies": ["Быстрая разработка", "Тестирование гипотез", "Итеративный подход"],
+      "price": "от 30,000 ₽"
+    },
+    {
+      "id": 4,
+      "icon": "🎨",
+      "title": "UI/UX дизайн",
+      "description": "Создаем интуитивные и привлекательные пользовательские интерфейсы",
+      "technologies": ["Figma", "Адаптивный дизайн", "Брендинг", "Прототипирование"],
+      "price": "от 25,000 ₽"
+    },
+    {
+      "id": 5,
+      "icon": "🚀",
+      "title": "Консультации & Аналитика",
+      "description": "Продуктовая аналитика, техническая экспертиза и планирование проектов",
+      "technologies": ["Продуктовая аналитика", "Техническая экспертиза", "Agile, Scrum"],
+      "price": "от 5,000 ₽/час"
+    },
+    {
+      "id": 6,
+      "icon": "🤖",
+      "title": "Machine Learning & AI",
+      "description": "Интеграция машинного обучения и искусственного интеллекта в ваши проекты",
+      "technologies": ["Python ML", "Go", "Анализ данных", "AI интеграция"],
+      "price": "от 60,000 ₽"
+    },
+    {
+      "id": 7,
+      "icon": "🔧",
+      "title": "Backend разработка",
+      "description": "Надежные серверные решения с использованием современных технологий",
+      "technologies": ["Java Spring", "Python", "Go", "REST API", "Database Design"],
+      "price": "от 40,000 ₽"
+    }
+  ],
+  "team_members": [
+    {
+      "id": 1,
+      "name": "Губайдуллин Ренат",
+      "role": "Frontend Developer",
+      "avatar": "💻",
+      "skills": ["React", "JavaScript", "Next.js", "PWA", "React Native"],
+      "experience": "3+ года",
+      "github": "https://github.com/renat-gubaidullin",
+      "telegram": "@renat_frontend"
+    },
+    {
+      "id": 2,
+      "name": "Сотников Максим",
+      "role": "UI/UX Designer",
+      "avatar": "🎨",
+      "skills": ["Figma", "Адаптивный дизайн", "Прототипирование", "Брендинг", "User Research"],
+      "experience": "4+ года",
+      "behance": "https://behance.net/maksim-sotnikov",
+      "telegram": "@maksim_design"
+    },
+    {
+      "id": 3,
+      "name": "Карамов Ибрагим",
+      "role": "Project Manager & Product Analyst",
+      "avatar": "📊",
+      "skills": ["Agile", "Scrum", "Продуктовая аналитика", "Планирование", "Team Management"],
+      "experience": "5+ лет",
+      "linkedin": "https://linkedin.com/in/ibrahim-karamov",
+      "telegram": "@ibrahim_pm"
+    },
+    {
+      "id": 4,
+      "name": "Галеев Данис",
+      "role": "Backend Developer",
+      "avatar": "⚙️",
+      "skills": ["Java Spring", "Python", "Flask", "REST API", "Database Design"],
+      "experience": "3+ года",
+      "github": "https://github.com/danis-galeev",
+      "telegram": "@danis_backend"
+    },
+    {
+      "id": 5,
+      "name": "Хаметшин Ранэль",
+      "role": "Backend Developer & ML Engineer",
+      "avatar": "🔬",
+      "skills": ["Go", "Python", "Machine Learning", "Data Analysis", "AI Integration"],
+      "experience": "4+ года",
+      "github": "https://github.com/ranel-khametshin",
+      "telegram": "@ranel_ml"
+    },
+    {
+      "id": 6,
+      "name": "Замалов Инсаф",
+      "role": "ML Engineer",
+      "avatar": "🤖",
+      "skills": ["Python", "Machine Learning", "Data Science", "AI Development", "Neural Networks"],
+      "experience": "3+ года",
+      "github": "https://github.com/insaf-zamalov",
+      "telegram": "@insaf_ml"
+    },
+    {
+      "id": 7,
+      "name": "Алия",
+      "role": "UI/UX Designer",
+      "avatar": "🎨",
+      "skills": ["UI Design", "UX Research", "Wireframing", "Visual Design", "Design Systems"],
+      "experience": "2+ года",
+      "behance": "https://behance.net/aliya-designer",
+      "telegram": "@aliya_design"
+    }
+  ],
+  "achievements": [
+    {
+      "id": 1,
+      "title": "Победа в хакатоне Moscow City Hack",
+      "description": "Первое место в номинации 'Лучшее техническое решение' с проектом городской мобильности",
+      "date": "2024-03-15",
+      "type": "hackathon",
+      "prize": "1,000,000 ₽"
+    },
+    {
+      "id": 2,
+      "title": "Разработка MVP для стартапа EcoTech",
+      "description": "Создали минимально жизнеспособный продукт за 2 недели, который привлек первых инвесторов",
+      "date": "2024-02-28",
+      "type": "project",
+      "investment": "$50,000"
+    },
+    {
+      "id": 3,
+      "title": "Участие в Digital Breakthrough",
+      "description": "Вошли в топ-10 команд в треке 'Искусственный интеллект и машинное обучение'",
+      "date": "2024-01-20",
+      "type": "hackathon",
+      "participants": "2000+"
+    },
+    {
+      "id": 4,
+      "title": "Лауреаты премии 'Цифровые звезды'",
+      "description": "Получили признание в номинации 'Лучшая молодежная команда' от IT-сообщества",
+      "date": "2023-12-10",
+      "type": "award",
+      "organizer": "Digital Russia"
+    }
+  ],
+  "contact": {
+    "project_contact_1": {
+      "name": "Хаметшин Ранэль",
+      "role": "Техническое руководство",
+      "telegram": "@Dremotha"
+    },
+    "project_contact_2": {
+      "name": "Карамов Ибрагим", 
+      "role": "Управление проектами",
+      "telegram": "@Ch0pperrr"
+    },
+    "channel": "https://t.me/it_aul",
+    "channel_name": "@it_aul",
+    "location": "Россия"
+  },
+  "technologies": {
+    "frontend": ["React", "JavaScript", "Next.js", "PWA", "TypeScript"],
+    "backend": ["Java Spring", "Python", "Go", "Flask", "Node.js"],
+    "mobile": ["React Native", "PWA", "Cross-platform"],
+    "databases": ["PostgreSQL", "MongoDB", "Redis", "MySQL", "Database Design"],
+    "ml_ai": ["Machine Learning", "Python ML", "Data Analysis", "AI Integration"],
+    "management": ["Agile", "Scrum", "Продуктовая аналитика", "Project Management"],
+    "design": ["Figma", "Адаптивный дизайн", "Прототипирование", "Брендинг", "User Research"],
+    "devops": ["Docker", "API Development", "DevOps", "CI/CD"]
+  },
+  "pricing": {
+    "landing_page": {
+      "min": 15000,
+      "max": 50000,
+      "currency": "RUB"
+    },
+    "web_app": {
+      "min": 80000,
+      "max": 500000,
+      "currency": "RUB"
+    },
+    "mobile_app": {
+      "min": 100000,
+      "max": 800000,
+      "currency": "RUB"
+    },
+    "consultation": {
+      "hourly": 5000,
+      "currency": "RUB"
+    }
+  }
+} 

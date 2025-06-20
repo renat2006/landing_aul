@@ -3,8 +3,13 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.pnpm-debug.log*
 
-# Build outputs
+# NPM Cache
+.npm-cache/
+.npm/
+
+# Production builds
 dist/
 build/
 *.tgz
@@ -57,7 +62,7 @@ jspm_packages/
 *.tsbuildinfo
 
 # Optional npm cache directory
-.npm
+.npm/
 
 # Optional eslint cache
 .eslintcache
@@ -87,4 +92,7 @@ webpack-bundle-analyzer-report.html
 
 # Temporary folders
 tmp/
-temp/ 
+temp/
+
+# Webpack Bundle Analyzer
+bundle-analyzer-report.html 

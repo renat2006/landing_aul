@@ -1,10 +1,65 @@
 // Import styles for webpack
 import './styles.css';
+import './pixel-icons.css';
+
+// =================
+// Pixel Decorations
+// =================
+function createPixelDecorations() {
+    const decorations = document.createElement('div');
+    decorations.className = 'pixel-decorations';
+    
+    const elements = [
+        { class: 'pixel-dino', delay: 0 },
+        { class: 'pixel-clock', delay: 3000 },
+        { class: 'pixel-emoji', delay: 6000 },
+        { class: 'pixel-heart', delay: 9000 },
+        { class: 'pixel-rocket-float', delay: 12000 }
+    ];
+    
+    elements.forEach((element, index) => {
+        setTimeout(() => {
+            const pixelElement = document.createElement('div');
+            pixelElement.className = `floating-pixel-element ${element.class}`;
+            decorations.appendChild(pixelElement);
+        }, element.delay);
+    });
+    
+    document.body.appendChild(decorations);
+}
+
+// Initialize Pixel Effects
+function initializePixelEffects() {
+    // Add pixel classes to existing elements
+    const hero = document.querySelector('.hero');
+    if (hero) {
+        hero.classList.add('pixel-enhanced');
+    }
+    
+    const serviceCards = document.querySelectorAll('.service-card');
+    serviceCards.forEach(card => {
+        card.classList.add('pixel-enhanced');
+    });
+    
+    const teamMembers = document.querySelectorAll('.team-member');
+    teamMembers.forEach(member => {
+        member.classList.add('pixel-style');
+    });
+    
+    // Add glitch effect to main title
+    const heroTitle = document.querySelector('.hero-title .title-main');
+    if (heroTitle) {
+        heroTitle.classList.add('pixel-glitch');
+        heroTitle.setAttribute('data-text', heroTitle.textContent);
+    }
+}
 
 // =================
 // Navigation
 // =================
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize pixel effects first
+    initializePixelEffects();
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.getElementById('nav-menu');
     
@@ -468,53 +523,62 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // =================
-// Preloader
+// Auto Team Counter
 // =================
-window.addEventListener('load', function() {
-    const preloader = document.createElement('div');
-    preloader.id = 'preloader';
-    preloader.style.cssText = `
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: #000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 9999;
-        transition: opacity 0.5s ease;
-    `;
+function updateTeamCount() {
+    const teamMembers = document.querySelectorAll('.team-member[data-member]');
+    const teamCount = teamMembers.length;
     
-    const logo = document.createElement('img');
-    logo.src = 'Frame 9.svg';
-    logo.style.cssText = `
-        width: 100px;
-        height: 100px;
-        animation: pulse 1s ease-in-out infinite alternate;
-    `;
+    // Update hero description
+    const heroTeamCount = document.getElementById('team-count');
+    if (heroTeamCount) {
+        heroTeamCount.textContent = teamCount;
+    }
     
-    preloader.appendChild(logo);
-    document.body.appendChild(preloader);
+    // Update stats counter
+    const developersCount = document.getElementById('developers-count');
+    if (developersCount) {
+        developersCount.setAttribute('data-target', teamCount);
+        developersCount.textContent = '0'; // Reset for animation
+    }
     
-    // Add pulse animation
-    const pulseStyle = document.createElement('style');
-    pulseStyle.textContent = `
-        @keyframes pulse {
-            from { transform: scale(1); opacity: 0.8; }
-            to { transform: scale(1.1); opacity: 1; }
+    // Update code block
+    const codeMembersCount = document.getElementById('code-members-count');
+    if (codeMembersCount) {
+        codeMembersCount.textContent = teamCount;
+    }
+    
+    console.log(`Team count updated: ${teamCount} members`);
+}
+
+// Initialize team counter when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    updateTeamCount();
+});
+
+// Optional: Update team count when team section changes (for dynamic additions)
+const teamObserver = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+        if (mutation.type === 'childList' && 
+            mutation.target.classList.contains('team-grid')) {
+            updateTeamCount();
+            // Re-trigger stats animation if needed
+            setTimeout(() => {
+                animateCounters();
+            }, 100);
         }
-    `;
-    document.head.appendChild(pulseStyle);
-    
-    // Remove preloader after 1 second
-    setTimeout(() => {
-        preloader.style.opacity = '0';
-        setTimeout(() => {
-            if (preloader.parentNode) {
-                preloader.parentNode.removeChild(preloader);
-            }
-        }, 500);
-    }, 1000);
-}); 
+    });
+});
+
+// Start observing team section for changes
+document.addEventListener('DOMContentLoaded', function() {
+    const teamGrid = document.querySelector('.team-grid');
+    if (teamGrid) {
+        teamObserver.observe(teamGrid, {
+            childList: true,
+            subtree: true
+        });
+    }
+});
+
+ 

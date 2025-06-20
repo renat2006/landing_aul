@@ -1,0 +1,321 @@
+/* ======================
+   PIXEL ICONS & ELEMENTS
+   ====================== */
+
+/* Pixel Icon Base Styles */
+.pixel-icon {
+    display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
+    vertical-align: middle;
+    filter: drop-shadow(0 0 2px rgba(221, 217, 42, 0.3));
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pixel-icon:hover {
+    transform: scale(1.1) rotate(2deg);
+    filter: drop-shadow(0 0 8px rgba(221, 217, 42, 0.6));
+}
+
+/* Specific Pixel Icons */
+.pixel-web { background: url('./assets/pixel illustrations/rocket.svg') no-repeat center; background-size: contain; }
+.pixel-mobile { background: url('./assets/pixel illustrations/plane.svg') no-repeat center; background-size: contain; }
+.pixel-mvp { background: url('./assets/pixel illustrations/arrow.svg') no-repeat center; background-size: contain; }
+.pixel-design { background: url('./assets/pixel illustrations/heart icon.svg') no-repeat center; background-size: contain; }
+.pixel-consulting { background: url('./assets/pixel illustrations/pie chart.svg') no-repeat center; background-size: contain; }
+.pixel-ai { background: url('./assets/pixel illustrations/easter egg.svg') no-repeat center; background-size: contain; }
+.pixel-backend { background: url('./assets/pixel illustrations/sneakers.svg') no-repeat center; background-size: contain; }
+
+/* Team Member Specific Icons */
+.pixel-frontend { background: url('./assets/pixel illustrations/rocket.svg') no-repeat center; background-size: contain; }
+.pixel-designer { background: url('./assets/pixel illustrations/heart icon.svg') no-repeat center; background-size: contain; }
+.pixel-manager { background: url('./assets/pixel illustrations/pie chart.svg') no-repeat center; background-size: contain; }
+.pixel-java-backend { background: url('./assets/pixel illustrations/sneakers.svg') no-repeat center; background-size: contain; }
+.pixel-ml-backend { background: url('./assets/pixel illustrations/comet.svg') no-repeat center; background-size: contain; }
+.pixel-ml-engineer { background: url('./assets/pixel illustrations/satellite.svg') no-repeat center; background-size: contain; }
+.pixel-ui-designer { background: url('./assets/pixel illustrations/smiling emoji.svg') no-repeat center; background-size: contain; }
+
+/* Pixel Grid Background Pattern */
+.pixel-grid-bg {
+    background-image: 
+        linear-gradient(rgba(221, 217, 42, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(221, 217, 42, 0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+    position: relative;
+}
+
+/* Service Cards with Pixel Enhancement */
+.service-card.pixel-enhanced {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card.pixel-enhanced::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(221, 217, 42, 0.1), rgba(0, 0, 0, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.service-card.pixel-enhanced:hover::before {
+    opacity: 1;
+}
+
+.service-card.pixel-enhanced .pixel-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Pixel Glitch Effects */
+.pixel-glitch {
+    position: relative;
+    animation: glitch-skew 2s infinite linear alternate-reverse;
+}
+
+.pixel-glitch::before,
+.pixel-glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.pixel-glitch::before {
+    animation: glitch-anim-1 0.5s infinite linear alternate-reverse;
+    color: #DDD92A;
+    z-index: -1;
+}
+
+.pixel-glitch::after {
+    animation: glitch-anim-2 1s infinite linear alternate-reverse;
+    color: rgba(221, 217, 42, 0.8);
+    z-index: -2;
+}
+
+/* Pixel Animation Keyframes */
+@keyframes glitch-anim-1 {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+@keyframes glitch-anim-2 {
+    0% { transform: translate(0); }
+    20% { transform: translate(2px, -2px); }
+    40% { transform: translate(2px, 2px); }
+    60% { transform: translate(-2px, -2px); }
+    80% { transform: translate(-2px, 2px); }
+    100% { transform: translate(0); }
+}
+
+@keyframes glitch-skew {
+    0% { transform: skew(0deg); }
+    10% { transform: skew(1deg); }
+    20% { transform: skew(0deg); }
+    30% { transform: skew(-1deg); }
+    40% { transform: skew(0deg); }
+    50% { transform: skew(0.5deg); }
+    60% { transform: skew(0deg); }
+    70% { transform: skew(-0.5deg); }
+    80% { transform: skew(0deg); }
+    90% { transform: skew(1deg); }
+    100% { transform: skew(0deg); }
+}
+
+/* Pixel Team Member Styles */
+.team-member.pixel-style {
+    background: linear-gradient(135deg, #0f0f0f, #1f1f1f);
+    border: 1px solid rgba(221, 217, 42, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.team-member.pixel-style::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(221, 217, 42, 0.1), transparent);
+    animation: shimmer 3s infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.team-member.pixel-style:hover::before {
+    opacity: 1;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+/* Hero Section Pixel Enhancement */
+.hero.pixel-enhanced {
+    background: linear-gradient(135deg, #000000 0%, #0f0f0f 50%, #1a1a1a 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero.pixel-enhanced::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0icmdiYSgyMjEsIDIxNywgNDIsIDAuMDMpIi8+Cjwvc3ZnPgo=') repeat;
+    pointer-events: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .pixel-icon {
+        width: 1em;
+        height: 1em;
+    }
+    
+    .service-card.pixel-enhanced .pixel-icon {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* --- NEW STATIC PIXEL ART STYLES --- */
+
+.hero-visual, .about-visual {
+    position: relative;
+}
+
+.pixel-art-element {
+    position: absolute;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    filter: drop-shadow(0 0 10px rgba(221, 217, 42, 0.4));
+    transition: all 0.3s ease;
+    z-index: 0;
+}
+
+.pixel-art-element:hover {
+    filter: drop-shadow(0 0 20px rgba(221, 217, 42, 0.8));
+    transform: scale(1.05) rotate(2deg);
+}
+
+/* Hero Section Static Illustrations - Minimal & Strategic */
+.hero-pixel-rocket {
+    width: 80px;
+    top: 10%;
+    right: 8%;
+    transform: rotate(15deg);
+}
+
+.hero-pixel-comet {
+    width: 100px;
+    bottom: 15%;
+    left: 5%;
+    transform: rotate(-10deg);
+}
+
+/* About Section Static Illustrations */
+.about-pixel-chart {
+    width: 85px;
+    top: 20%;
+    right: -8%;
+    transform: rotate(-15deg);
+}
+
+/* Responsive Static Illustrations */
+@media (max-width: 1200px) {
+    .pixel-art-element {
+        transform: scale(0.8);
+    }
+}
+
+@media (max-width: 992px) {
+    .pixel-art-element {
+        transform: scale(0.6);
+        opacity: 0.8;
+    }
+    .hero-pixel-plane {
+        top: 65%;
+    }
+}
+
+/* Services Section Static Illustrations */
+.services-pixel-tshirt {
+    width: 90px;
+    top: 15%;
+    right: 3%;
+    transform: rotate(-20deg);
+}
+
+/* Team Section Static Illustrations */
+.team-pixel-heart {
+    width: 85px;
+    top: 20%;
+    left: 2%;
+    transform: rotate(18deg);
+}
+
+/* Contact Section Static Illustrations */
+.contact-pixel-plane {
+    width: 95px;
+    bottom: 20%;
+    right: 5%;
+    transform: rotate(12deg);
+}
+
+/* Section Positioning for Pixel Art */
+.services, .team, .contact {
+    position: relative;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    /* Show only key elements on mobile for better performance */
+    .hero .pixel-art-element {
+        width: 50px;
+        opacity: 0.7;
+    }
+    
+    .hero-pixel-comet {
+        display: none; /* Hide comet on mobile */
+    }
+    
+    .about-pixel-chart {
+        width: 60px;
+        opacity: 0.6;
+        top: 15%;
+        right: -5%;
+    }
+    
+    /* Hide decorative elements on mobile for better performance */
+    .services .pixel-art-element,
+    .team .pixel-art-element,
+    .contact .pixel-art-element {
+        display: none;
+    }
+} 

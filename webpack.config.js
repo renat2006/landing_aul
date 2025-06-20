@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = (env, argv) => {
   const isProduction = argv.mode === 'production';
@@ -132,6 +133,24 @@ module.exports = (env, argv) => {
           minifyCSS: true,
           minifyURLs: true,
         } : false,
+      }),
+
+      // Copy SEO and PWA files
+      new CopyWebpackPlugin({
+        patterns: [
+          {
+            from: 'src/robots.txt',
+            to: 'robots.txt'
+          },
+          {
+            from: 'src/sitemap.xml',
+            to: 'sitemap.xml'
+          },
+          {
+            from: 'src/site.webmanifest',
+            to: 'site.webmanifest'
+          }
+        ]
       }),
 
       ...(isProduction ? [

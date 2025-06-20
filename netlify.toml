@@ -1,0 +1,37 @@
+[build]
+  # Команда для сборки проекта
+  command = "npm run build"
+  # Папка с результатом сборки для публикации
+  publish = "dist"
+  # Базовая директория проекта
+  base = "."
+
+[build.environment]
+  NODE_VERSION = "18"
+
+# Настройки для SPA (Single Page Application)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Настройки заголовков для статических файлов
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000" 

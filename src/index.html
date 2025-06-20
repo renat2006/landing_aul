@@ -39,29 +39,99 @@
 
     <!-- Hero Section -->
     <section id="hero" class="hero">
+        <!-- Background Elements -->
+        <div class="hero-bg-grid"></div>
+        <div class="hero-bg-particles"></div>
+        
         <div class="hero-container">
             <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-icon">🚀</span>
+                    <span class="badge-text">От хакатонов к проектам</span>
+                </div>
+                
                 <h1 class="hero-title">
+                    <span class="title-accent">Команда</span>
                     <span class="title-main">IT-AUL</span>
-                    <span class="title-sub">Проблематика → Решения</span>
+                    <span class="title-sub">Превращаем идеи в код</span>
                 </h1>
+                
                 <p class="hero-description">
-                    Мы команда из <span id="team-count">7</span> профессиональных разработчиков с опытом участия в хакатонах. 
-                    Теперь создаем инновационные веб-решения под заказ.
+                    Мы команда из <span class="highlight-text" id="team-count">7</span> профессиональных разработчиков 
+                    с опытом участия в <span class="highlight-text">9+ хакатонах</span>. 
+                    Создаем инновационные веб-решения, которые работают.
                 </p>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-target="7">0</span>
+                        <span class="stat-label">Проектов</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="9">0</span>
+                        <span class="stat-label">Хакатонов</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="100">0</span>
+                        <span class="stat-label">% Качество</span>
+                    </div>
+                </div>
+                
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Заказать проект</a>
-                    <a href="#services" class="btn btn-secondary">Наши услуги</a>
+                    <a href="#contact" class="btn btn-primary">
+                        <span class="btn-text">Заказать проект</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+                    <a href="#services" class="btn btn-secondary">
+                        <span class="btn-text">Наши услуги</span>
+                        <span class="btn-icon">↗</span>
+                    </a>
                 </div>
             </div>
+            
             <div class="hero-visual">
-                <div class="hero-logo-large">
-                    <img src="assets/images/Frame 9.svg" alt="IT-AUL" class="logo-animation">
+                <div class="hero-logo-container">
+                    <div class="logo-glow"></div>
+                    <img src="assets/images/Frame 9.svg" alt="IT-AUL" class="hero-logo-main">
+                    <div class="logo-orbits">
+                        <div class="orbit orbit-1">
+                            <div class="orbit-dot"></div>
+                        </div>
+                        <div class="orbit orbit-2">
+                            <div class="orbit-dot"></div>
+                        </div>
+                        <div class="orbit orbit-3">
+                            <div class="orbit-dot"></div>
+                        </div>
+                    </div>
                 </div>
-                <!-- Static Pixel Art Decorations - reduced quantity -->
-                <img src="assets/pixel illustrations/rocket.svg" alt="Pixel Rocket" class="pixel-art-element hero-pixel-rocket">
-                <img src="assets/pixel illustrations/comet.svg" alt="Pixel Comet" class="pixel-art-element hero-pixel-comet">
+                
+                <!-- Floating Code Elements -->
+                <div class="floating-code-elements">
+                    <div class="code-element" style="top: 20%; left: 10%;">
+                        <span>{ }</span>
+                    </div>
+                    <div class="code-element" style="top: 60%; right: 15%;">
+                        <span>&lt;/&gt;</span>
+                    </div>
+                    <div class="code-element" style="bottom: 30%; left: 20%;">
+                        <span>💻</span>
+                    </div>
+                    <div class="code-element" style="top: 40%; right: 5%;">
+                        <span>⚡</span>
+                    </div>
+                </div>
+                
+                <!-- Pixel Art Decorations -->
+                <img src="assets/pixel illustrations/rocket.svg" alt="Pixel Rocket" class="pixel-decoration rocket-decoration">
+                <img src="assets/pixel illustrations/comet.svg" alt="Pixel Comet" class="pixel-decoration comet-decoration">
             </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+            <span>Узнать больше</span>
         </div>
     </section>
 
@@ -212,54 +282,127 @@
     <section id="team" class="team">
         <div class="container">
             <h2 class="section-title">Наша команда</h2>
+            <p class="team-intro">Знакомьтесь с нашими талантливыми специалистами</p>
             <div class="team-grid">
                 <div class="team-member" data-member="frontend">
-                    <div class="member-avatar pixel-icon pixel-frontend"></div>
-                    <h3>Губайдуллин Ренат</h3>
-                    <p class="member-role">Frontend Developer</p>
-                    <p class="member-skills">React, JavaScript, Next.js, PWA, React Native</p>
+                    <div class="member-avatar-container">
+                        <img src="assets/team_avatars/Renat.png" alt="Губайдуллин Ренат" class="member-avatar-image">
+                        <div class="avatar-glow"></div>
+                        <div class="avatar-border"></div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Губайдуллин Ренат</h3>
+                        <p class="member-role">Frontend Developer</p>
+                        <div class="member-skills">
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Next.js</span>
+                            <span class="skill-tag">PWA</span>
+                            <span class="skill-tag">React Native</span>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="team-member" data-member="designer">
-                    <div class="member-avatar pixel-icon pixel-designer"></div>
-                    <h3>Сотников Максим</h3>
-                    <p class="member-role">UI/UX Designer</p>
-                    <p class="member-skills">Figma, Адаптивный дизайн, Прототипирование</p>
+                    <div class="member-avatar-container">
+                        <img src="assets/team_avatars/Maxim.png" alt="Сотников Максим" class="member-avatar-image">
+                        <div class="avatar-glow"></div>
+                        <div class="avatar-border"></div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Сотников Максим</h3>
+                        <p class="member-role">UI/UX Designer</p>
+                        <div class="member-skills">
+                            <span class="skill-tag">Figma</span>
+                            <span class="skill-tag">Adaptive Design</span>
+                            <span class="skill-tag">Prototyping</span>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="team-member" data-member="manager">
-                    <div class="member-avatar pixel-icon pixel-manager"></div>
-                    <h3>Карамов Ибрагим</h3>
-                    <p class="member-role">Project Manager & Product Analyst</p>
-                    <p class="member-skills">Agile, Scrum, Продуктовая аналитика</p>
+                    <div class="member-avatar-container">
+                        <img src="assets/team_avatars/Ibragim.png" alt="Карамов Ибрагим" class="member-avatar-image">
+                        <div class="avatar-glow"></div>
+                        <div class="avatar-border"></div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Карамов Ибрагим</h3>
+                        <p class="member-role">Project Manager & Product Analyst</p>
+                        <div class="member-skills">
+                            <span class="skill-tag">Agile</span>
+                            <span class="skill-tag">Scrum</span>
+                            <span class="skill-tag">Analytics</span>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="team-member" data-member="java-backend">
-                    <div class="member-avatar pixel-icon pixel-java-backend"></div>
-                    <h3>Галеев Данис</h3>
-                    <p class="member-role">Backend Developer</p>
-                    <p class="member-skills">Java Spring, Python, Flask</p>
+                    <div class="member-avatar-container">
+                        <img src="assets/team_avatars/Danis.png" alt="Галеев Данис" class="member-avatar-image">
+                        <div class="avatar-glow"></div>
+                        <div class="avatar-border"></div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Галеев Данис</h3>
+                        <p class="member-role">Backend Developer</p>
+                        <div class="member-skills">
+                            <span class="skill-tag">Java Spring</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Flask</span>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="team-member" data-member="ml-backend">
-                    <div class="member-avatar pixel-icon pixel-ml-backend"></div>
-                    <h3>Хаметшин Ранэль</h3>
-                    <p class="member-role">Backend Developer & ML Engineer</p>
-                    <p class="member-skills">Go, Python, Machine Learning</p>
+                    <div class="member-avatar-container">
+                        <img src="assets/team_avatars/Ranel.png" alt="Хаметшин Ранэль" class="member-avatar-image">
+                        <div class="avatar-glow"></div>
+                        <div class="avatar-border"></div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Хаметшин Ранэль</h3>
+                        <p class="member-role">Backend Developer & ML Engineer</p>
+                        <div class="member-skills">
+                            <span class="skill-tag">Go</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Machine Learning</span>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="team-member" data-member="ml-engineer">
-                    <div class="member-avatar pixel-icon pixel-ml-engineer"></div>
-                    <h3>Замалов Инсаф</h3>
-                    <p class="member-role">ML Engineer</p>
-                    <p class="member-skills">Python, Machine Learning, Data Science</p>
+                    <div class="member-avatar-container">
+                        <img src="assets/team_avatars/Insaf.png" alt="Замалов Инсаф" class="member-avatar-image">
+                        <div class="avatar-glow"></div>
+                        <div class="avatar-border"></div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Замалов Инсаф</h3>
+                        <p class="member-role">ML Engineer</p>
+                        <div class="member-skills">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">Data Science</span>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="team-member" data-member="ui-designer">
-                    <div class="member-avatar pixel-icon pixel-ui-designer"></div>
-                    <h3>Алия</h3>
-                    <p class="member-role">UI/UX Designer</p>
-                    <p class="member-skills">UI Design, UX Research, Visual Design</p>
+                    <div class="member-avatar-container">
+                        <img src="assets/team_avatars/Aliya.png" alt="Алия" class="member-avatar-image">
+                        <div class="avatar-glow"></div>
+                        <div class="avatar-border"></div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Алия</h3>
+                        <p class="member-role">UI/UX Designer</p>
+                        <div class="member-skills">
+                            <span class="skill-tag">UI Design</span>
+                            <span class="skill-tag">UX Research</span>
+                            <span class="skill-tag">Visual Design</span>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- Static Team Pixel Decorations -->

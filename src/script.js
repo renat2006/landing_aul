@@ -55,11 +55,42 @@ function initializePixelEffects() {
 }
 
 // =================
+// Scroll Indicator
+// =================
+function initScrollIndicator() {
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    if (scrollIndicator) {
+        scrollIndicator.addEventListener('click', () => {
+            const aboutSection = document.querySelector('#about');
+            if (aboutSection) {
+                aboutSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+        
+        // Hide scroll indicator when scrolling down
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            const viewportHeight = window.innerHeight;
+            
+            if (scrollY > viewportHeight * 0.3) {
+                scrollIndicator.style.opacity = '0';
+                scrollIndicator.style.pointerEvents = 'none';
+            } else {
+                scrollIndicator.style.opacity = '0.7';
+                scrollIndicator.style.pointerEvents = 'auto';
+            }
+        });
+    }
+}
+
+// =================
 // Navigation
 // =================
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize pixel effects first
     initializePixelEffects();
+    // Initialize scroll indicator
+    initScrollIndicator();
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.getElementById('nav-menu');
     
@@ -150,37 +181,75 @@ document.addEventListener('DOMContentLoaded', function() {
 // =================
 // Counter Animation
 // =================
-function animateCounters() {
-    const counters = document.querySelectorAll('.stat-number');
+function animateCounters(counterElements) {
+    if (!counterElements) {
+        counterElements = document.querySelectorAll('.stat-number');
+    }
     
-    counters.forEach(counter => {
-        const target = parseInt(counter.getAttribute('data-target'));
-        const count = +counter.innerText;
-        const increment = target / 100;
+    counterElements.forEach(counter => {
+        // Проверяем, что элемент еще не анимирован
+        if (counter.hasAttribute('data-animated')) return;
         
-        if (count < target) {
-            counter.innerText = Math.ceil(count + increment);
-            setTimeout(() => animateCounters(), 20);
-        } else {
-            counter.innerText = target;
+        const targetAttr = counter.getAttribute('data-target');
+        if (!targetAttr) return;
+        
+        const target = parseInt(targetAttr);
+        if (isNaN(target)) {
+            console.warn('Invalid target value for counter:', targetAttr);
+            return;
         }
+        
+        let count = 0;
+        const increment = target / 100;
+        counter.setAttribute('data-animated', 'true');
+        
+        function updateCounter() {
+            if (count < target) {
+                count += increment;
+                counter.innerText = Math.ceil(count);
+                requestAnimationFrame(updateCounter);
+            } else {
+                counter.innerText = target;
+            }
+        }
+        
+        updateCounter();
     });
 }
 
-// Trigger counter animation when stats section is visible
-const statsObserver = new IntersectionObserver(function(entries) {
+// Trigger counter animation for hero stats when visible
+const heroStatsObserver = new IntersectionObserver(function(entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            animateCounters();
-            statsObserver.unobserve(entry.target);
+            const heroCounters = entry.target.querySelectorAll('.stat-number');
+            animateCounters(heroCounters);
+            heroStatsObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+// Trigger counter animation for about stats when visible
+const aboutStatsObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const aboutCounters = entry.target.querySelectorAll('.stat-number');
+            animateCounters(aboutCounters);
+            aboutStatsObserver.unobserve(entry.target);
         }
     });
 }, { threshold: 0.5 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    const statsSection = document.querySelector('.stats');
-    if (statsSection) {
-        statsObserver.observe(statsSection);
+    // Наблюдаем за hero статистикой
+    const heroStats = document.querySelector('.hero-stats');
+    if (heroStats) {
+        heroStatsObserver.observe(heroStats);
+    }
+    
+    // Наблюдаем за about статистикой
+    const aboutStats = document.querySelector('.about .stats');
+    if (aboutStats) {
+        aboutStatsObserver.observe(aboutStats);
     }
 });
 

@@ -3,7 +3,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = (env, argv) => {
@@ -139,25 +138,6 @@ module.exports = (env, argv) => {
         new MiniCssExtractPlugin({
           filename: 'css/[name].[contenthash:8].css',
           chunkFilename: 'css/[name].[contenthash:8].chunk.css',
-        }),
-
-        new ImageminPlugin({
-          test: /\.(jpe?g|png|gif|svg)$/i,
-          optipng: {
-            optimizationLevel: 5,
-          },
-          mozjpeg: {
-            quality: 80,
-            progressive: true,
-          },
-          svgo: {
-            plugins: [
-              { name: 'removeViewBox', active: false },
-            ],
-          },
-          gifsicle: {
-            optimizationLevel: 3,
-          },
         }),
       ] : []),
 

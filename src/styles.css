@@ -1464,16 +1464,20 @@ h3 {
     width: 100%;
     padding: 1rem;
     margin-bottom: 1rem;
-    border: 2px solid #eee;
+    background: rgba(248, 248, 248, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: var(--border-radius);
     font-family: var(--font-body);
     transition: var(--transition);
+    color: var(--text-dark);
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
-    border-color: var(--primary-color);
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(221, 217, 42, 0.5);
+    box-shadow: 0 0 0 3px rgba(221, 217, 42, 0.1);
 }
 
 .contact-form textarea {

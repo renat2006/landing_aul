@@ -28,6 +28,9 @@
 .pixel-consulting { background: url('./assets/pixel illustrations/pie chart.svg') no-repeat center; background-size: contain; }
 .pixel-ai { background: url('./assets/pixel illustrations/easter egg.svg') no-repeat center; background-size: contain; }
 .pixel-backend { background: url('./assets/pixel illustrations/sneakers.svg') no-repeat center; background-size: contain; }
+.pixel-trophy { background: url('./assets/pixel illustrations/cup.svg') no-repeat center; background-size: contain; }
+.pixel-plane { background: url('./assets/pixel illustrations/plane.svg') no-repeat center; background-size: contain; }
+.pixel-exhibition { background: url('./assets/pixel illustrations/rocket.svg') no-repeat center; background-size: contain; }
 
 /* Team Member Specific Icons */
 .pixel-frontend { background: url('./assets/pixel illustrations/rocket.svg') no-repeat center; background-size: contain; }
@@ -214,9 +217,8 @@
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
-    filter: drop-shadow(0 0 10px rgba(221, 217, 42, 0.4));
+    filter: drop-shadow(0 0 15px rgba(221, 217, 42, 0.5));
     transition: all 0.3s ease;
-    z-index: 0;
 }
 
 .pixel-art-element:hover {
@@ -242,9 +244,10 @@
 /* About Section Static Illustrations */
 .about-pixel-chart {
     width: 85px;
-    top: 20%;
-    right: -8%;
+    top: -10%;
+    right: 5%;
     transform: rotate(-15deg);
+    z-index: 3;
 }
 
 /* Responsive Static Illustrations */
@@ -265,19 +268,27 @@
 }
 
 /* Services Section Static Illustrations */
-.services-pixel-tshirt {
-    width: 90px;
-    top: 15%;
-    right: 3%;
-    transform: rotate(-20deg);
+.services-pixel-tshirt,
+.services-pixel-editor {
+    width: 140px;
+    bottom: 2rem;
+    right: 3rem;
+    transform: rotate(15deg);
+    z-index: 10;
+    opacity: 0.9;
+    pointer-events: none;
 }
 
 /* Team Section Static Illustrations */
-.team-pixel-heart {
-    width: 85px;
-    top: 20%;
-    left: 2%;
-    transform: rotate(18deg);
+.team-pixel-heart,
+.team-pixel-group {
+    width: 140px;
+    bottom: 2rem;
+    left: 3rem;
+    transform: rotate(-18deg);
+    z-index: 10;
+    opacity: 0.9;
+    pointer-events: none;
 }
 
 /* Contact Section Static Illustrations */
@@ -291,7 +302,6 @@
 /* Section Positioning for Pixel Art */
 .services, .team, .contact {
     position: relative;
-    overflow: hidden;
 }
 
 @media (max-width: 768px) {
@@ -307,14 +317,31 @@
     
     .about-pixel-chart {
         width: 60px;
-        opacity: 0.6;
-        top: 15%;
-        right: -5%;
+        opacity: 0.8;
+        top: -8%;
+        right: 3%;
     }
     
-    /* Hide decorative elements on mobile for better performance */
-    .services .pixel-art-element,
-    .team .pixel-art-element,
+    /* Adjust decorative elements on mobile */
+    .services-pixel-editor,
+    .services-pixel-tshirt,
+    .team-pixel-group,
+    .team-pixel-heart {
+        width: 100px;
+        bottom: 1rem;
+        opacity: 0.75;
+    }
+    
+    .services-pixel-editor,
+    .services-pixel-tshirt {
+        right: 1.5rem;
+    }
+    
+    .team-pixel-group,
+    .team-pixel-heart {
+        left: 1.5rem;
+    }
+    
     .contact .pixel-art-element {
         display: none;
     }

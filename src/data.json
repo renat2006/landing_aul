@@ -1,13 +1,14 @@
 {
   "team": {
     "name": "IT-AUL",
-    "description": "Команда из 6 профессиональных разработчиков с опытом участия в хакатонах",
-    "motto": "Проблематика → Решения",
+    "description": "Команда разработчиков с 6 призовыми местами на хакатонах МТС и Яндекс. Собственный AI-стартап. 3 международные выставки",
+    "motto": "Побеждаем. Создаём. Запускаем.",
     "stats": {
-      "projects": 7,
+      "projects": 9,
       "developers": 7,
       "hackathons": 9,
-      "yearsExperience": 3
+      "awards": 6,
+      "exhibitions": 3
     }
   },
   "services": [
@@ -24,15 +25,15 @@
       "icon": "📱",
       "title": "Мобильные приложения",
       "description": "Разрабатываем кроссплатформенные мобильные приложения для iOS и Android",
-      "technologies": ["React Native", "PWA", "Кроссплатформенная разработка"],
+      "technologies": ["Flutter", "React Native", "PWA", "Кроссплатформенная разработка"],
       "price": "от 80,000 ₽"
     },
     {
       "id": 3,
       "icon": "⚡",
       "title": "MVP и прототипы",
-      "description": "Быстрая разработка минимально жизнеспособных продуктов для стартапов",
-      "technologies": ["Быстрая разработка", "Тестирование гипотез", "Итеративный подход"],
+      "description": "MVP за 4-8 недель. Скорость, отточенная на хакатонах и проверенная на собственном стартапе",
+      "technologies": ["От идеи до запуска за 4-8 недель", "Валидация гипотез", "Продуктовый подход"],
       "price": "от 30,000 ₽"
     },
     {
@@ -55,8 +56,8 @@
       "id": 6,
       "icon": "🤖",
       "title": "Machine Learning & AI",
-      "description": "Интеграция машинного обучения и искусственного интеллекта в ваши проекты",
-      "technologies": ["Python ML", "Go", "Анализ данных", "AI интеграция"],
+      "description": "AI-агенты, персонализация, интеграция ML в продукт. Опыт разработки AI-стартапа",
+      "technologies": ["LangChain, AI-агенты", "Персонализация, рекомендации", "Python ML, Go"],
       "price": "от 60,000 ₽"
     },
     {
@@ -143,42 +144,74 @@
   "achievements": [
     {
       "id": 1,
-      "title": "Победа в хакатоне Moscow City Hack",
-      "description": "Первое место в номинации 'Лучшее техническое решение' с проектом городской мобильности",
-      "date": "2024-03-15",
+      "title": "МТС True Tech Challenge '25",
+      "description": "Призовое место в трека разработки инновационных решений",
+      "date": "2025-01-15",
       "type": "hackathon",
-      "prize": "1,000,000 ₽"
+      "organizer": "МТС"
     },
     {
       "id": 2,
-      "title": "Разработка MVP для стартапа EcoTech",
-      "description": "Создали минимально жизнеспособный продукт за 2 недели, который привлек первых инвесторов",
-      "date": "2024-02-28",
-      "type": "project",
-      "investment": "$50,000"
+      "title": "Яндекс Образование '25",
+      "description": "1 место в хакатоне по разработке образовательных технологий",
+      "date": "2025-02-20",
+      "type": "hackathon",
+      "prize": "1 место"
     },
     {
       "id": 3,
-      "title": "Участие в Digital Breakthrough",
-      "description": "Вошли в топ-10 команд в треке 'Искусственный интеллект и машинное обучение'",
-      "date": "2024-01-20",
+      "title": "Татар.Бу '24",
+      "description": "1 место в региональном хакатоне по развитию цифровых сервисов",
+      "date": "2024-11-10",
       "type": "hackathon",
-      "participants": "2000+"
+      "prize": "1 место"
     },
     {
       "id": 4,
-      "title": "Лауреаты премии 'Цифровые звезды'",
-      "description": "Получили признание в номинации 'Лучшая молодежная команда' от IT-сообщества",
-      "date": "2023-12-10",
-      "type": "award",
-      "organizer": "Digital Russia"
+      "title": "Татар.Бу '25",
+      "description": "2 место в региональном хакатоне",
+      "date": "2025-03-15",
+      "type": "hackathon",
+      "prize": "2 место"
+    },
+    {
+      "id": 5,
+      "title": "ArtScience '25",
+      "description": "Призовое место в хакатоне на стыке искусства и технологий",
+      "date": "2025-02-01",
+      "type": "hackathon",
+      "organizer": "ArtScience"
+    },
+    {
+      "id": 6,
+      "title": "Kazan Digital Forum '24",
+      "description": "Представили собственный AI-стартап в сфере туризма на международной выставке",
+      "date": "2024-09-20",
+      "type": "exhibition",
+      "organizer": "Kazan Digital Forum"
+    },
+    {
+      "id": 7,
+      "title": "Kazan Digital Forum '25",
+      "description": "Повторное участие с демонстрацией развития AI-стартапа",
+      "date": "2025-09-18",
+      "type": "exhibition",
+      "organizer": "Kazan Digital Forum"
+    },
+    {
+      "id": 8,
+      "title": "Проект «Я в деле» '25",
+      "description": "Представили AI-стартап в рамках проекта развития молодежного предпринимательства",
+      "date": "2025-03-10",
+      "type": "exhibition",
+      "organizer": "Я в деле"
     }
   ],
   "contact": {
     "project_contact_1": {
       "name": "Хаметшин Ранэль",
       "role": "Техническое руководство",
-      "telegram": "@Dremotha"
+      "telegram": "@KhametshinR"
     },
     "project_contact_2": {
       "name": "Карамов Ибрагим", 
@@ -194,7 +227,7 @@
     "backend": ["Java Spring", "Python", "Go", "Flask", "Node.js"],
     "mobile": ["React Native", "PWA", "Cross-platform"],
     "databases": ["PostgreSQL", "MongoDB", "Redis", "MySQL", "Database Design"],
-    "ml_ai": ["Machine Learning", "Python ML", "Data Analysis", "AI Integration"],
+    "ml_ai": ["Machine Learning", "Python ML", "LangChain", "AI-агенты", "Персонализация", "Data Analysis", "AI Integration"],
     "management": ["Agile", "Scrum", "Продуктовая аналитика", "Project Management"],
     "design": ["Figma", "Адаптивный дизайн", "Прототипирование", "Брендинг", "User Research"],
     "devops": ["Docker", "API Development", "DevOps", "CI/CD"]

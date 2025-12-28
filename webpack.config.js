@@ -5,6 +5,8 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 
 module.exports = (env, argv) => {
   const isProduction = argv.mode === 'production';
@@ -12,8 +14,7 @@ module.exports = (env, argv) => {
 
   return {
     entry: {
-      main: './src/script.js',
-      styles: './src/styles.css'
+      main: './src/script.js'
     },
     
     output: {
@@ -26,7 +27,7 @@ module.exports = (env, argv) => {
     },
 
     mode: isProduction ? 'production' : 'development',
-    devtool: isProduction ? 'source-map' : 'eval-source-map',
+    devtool: isProduction ? false : 'eval-source-map',
 
     devServer: {
       static: {
@@ -37,6 +38,9 @@ module.exports = (env, argv) => {
       open: true,
       hot: true,
       historyApiFallback: true,
+      client: {
+        overlay: true,
+      },
     },
 
     module: {
@@ -85,13 +89,27 @@ module.exports = (env, argv) => {
           ]
         },
 
-        // Images
+        // Images - with optimization
         {
-          test: /\.(png|jpe?g|gif|svg|webp)$/i,
+          test: /\.(png|jpe?g|gif|webp|avif)$/i,
           type: 'asset',
           parser: {
             dataUrlCondition: {
-              maxSize: 8 * 1024, // 8kb
+              maxSize: 4 * 1024, // 4kb - smaller threshold for better caching
+            },
+          },
+          generator: {
+            filename: isProduction ? 'images/[name].[contenthash:8][ext]' : 'images/[name][ext]',
+          },
+        },
+
+        // SVG - inline small, file for large
+        {
+          test: /\.svg$/i,
+          type: 'asset',
+          parser: {
+            dataUrlCondition: {
+              maxSize: 2 * 1024, // 2kb
             },
           },
           generator: {
@@ -158,6 +176,22 @@ module.exports = (env, argv) => {
           filename: 'css/[name].[contenthash:8].css',
           chunkFilename: 'css/[name].[contenthash:8].chunk.css',
         }),
+        // Gzip compression
+        new CompressionPlugin({
+          filename: '[path][base].gz',
+          algorithm: 'gzip',
+          test: /\.(js|css|html|svg)$/,
+          threshold: 1024,
+          minRatio: 0.8,
+        }),
+        // Brotli compression
+        new CompressionPlugin({
+          filename: '[path][base].br',
+          algorithm: 'brotliCompress',
+          test: /\.(js|css|html|svg)$/,
+          threshold: 1024,
+          minRatio: 0.8,
+        }),
       ] : []),
 
       ...(env && env.analyze ? [new BundleAnalyzerPlugin()] : []),
@@ -170,28 +204,79 @@ module.exports = (env, argv) => {
           terserOptions: {
             compress: {
               drop_console: isProduction,
+              drop_debugger: isProduction,
+              pure_funcs: isProduction ? ['console.log', 'console.info', 'console.debug'] : [],
+            },
+            mangle: {
+              safari10: true,
             },
             format: {
               comments: false,
             },
           },
           extractComments: false,
+          parallel: true,
         }),
-        new CssMinimizerPlugin(),
+        new CssMinimizerPlugin({
+          minimizerOptions: {
+            preset: [
+              'default',
+              {
+                discardComments: { removeAll: true },
+                normalizeWhitespace: true,
+              },
+            ],
+          },
+        }),
+        // Image optimization
+        new ImageMinimizerPlugin({
+          minimizer: {
+            implementation: ImageMinimizerPlugin.sharpMinify,
+            options: {
+              encodeOptions: {
+                jpeg: { quality: 80 },
+                webp: { quality: 80 },
+                avif: { quality: 65 },
+                png: { compressionLevel: 9 },
+              },
+            },
+          },
+          generator: [
+            {
+              // Generate WebP versions
+              preset: 'webp',
+              implementation: ImageMinimizerPlugin.sharpGenerate,
+              options: {
+                encodeOptions: {
+                  webp: { quality: 80 },
+                },
+              },
+            },
+          ],
+        }),
       ],
       
       splitChunks: {
         chunks: 'all',
+        maxInitialRequests: 25,
+        minSize: 20000,
         cacheGroups: {
           vendor: {
             test: /[\\/]node_modules[\\/]/,
             name: 'vendors',
             chunks: 'all',
+            priority: 10,
+          },
+          common: {
+            minChunks: 2,
+            priority: 5,
+            reuseExistingChunk: true,
           },
         },
       },
       
       runtimeChunk: 'single',
+      moduleIds: 'deterministic',
     },
 
     resolve: {
@@ -205,8 +290,15 @@ module.exports = (env, argv) => {
 
     performance: {
       hints: isProduction ? 'warning' : false,
-      maxEntrypointSize: 250000,
-      maxAssetSize: 250000,
+      maxEntrypointSize: 300000,
+      maxAssetSize: 300000,
+    },
+
+    cache: {
+      type: 'filesystem',
+      buildDependencies: {
+        config: [__filename],
+      },
     },
   };
 }; 

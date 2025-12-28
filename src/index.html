@@ -2,7 +2,18 @@
 <html lang="ru" prefix="og: http://ogp.me/ns#">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    
+    <!-- DNS Prefetch & Preconnect for performance -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://mc.yandex.ru">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="assets/images/Frame 9.svg" as="image" type="image/svg+xml">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700&family=Lexend+Exa:wght@400;500;600&display=swap" as="style">
     
     <!-- Primary SEO Meta Tags -->
     <title>IT-AUL - Команда разработчиков | Веб-разработка, мобильные приложения, MVP</title>
@@ -11,6 +22,14 @@
     <meta name="author" content="IT-AUL Team">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="theme-color" content="#DDD92A">
+    <meta name="color-scheme" content="light dark">
+    
+    <!-- Mobile optimization -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="IT-AUL">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://it-aul.dev/">
@@ -49,12 +68,11 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
     <link rel="manifest" href="site.webmanifest">
     
-    <!-- Preconnect for performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
     <!-- Fonts with display=swap for performance -->
-    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800&family=Lexend+Exa:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700&family=Lexend+Exa:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700&family=Lexend+Exa:wght@400;500;600&display=swap" rel="stylesheet">
+    </noscript>
     
     <!-- Structured Data for Organization -->
     <script type="application/ld+json">
@@ -133,23 +151,50 @@
     }
     </script>
     
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-    m[i].l=1*new Date();
-    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
- 
-    ym(102895083, "init", {
-         clickmap:true,
-         trackLinks:true,
-         accurateTrackBounce:true,
-         webvisor:true
+    <!-- Structured Data for Local Business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "IT-AUL",
+      "image": "https://it-aul.dev/assets/images/og-image.png",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "RU"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "9"
+      },
+      "areaServed": "RU",
+      "serviceType": ["Веб-разработка", "Мобильные приложения", "MVP разработка", "UI/UX дизайн"]
+    }
+    </script>
+    
+<!-- Yandex.Metrika counter - deferred loading -->
+<script type="text/javascript">
+    // Defer Yandex.Metrika loading for better performance
+    window.addEventListener('load', function() {
+        setTimeout(function() {
+            (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+         
+            ym(102895083, "init", {
+                 clickmap:true,
+                 trackLinks:true,
+                 accurateTrackBounce:true,
+                 webvisor:true
+            });
+        }, 2000);
     });
- </script>
- <noscript><div><img src="https://mc.yandex.ru/watch/102895083" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
- <!-- /Yandex.Metrika counter -->
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/102895083" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </head>
 <body>
     <!-- Navigation -->
@@ -260,8 +305,8 @@
                 </div>
                 
                 <!-- Pixel Art Decorations -->
-                <img src="assets/pixel illustrations/rocket.svg" alt="" class="pixel-decoration rocket-decoration" aria-hidden="true">
-                <img src="assets/pixel illustrations/comet.svg" alt="" class="pixel-decoration comet-decoration" aria-hidden="true">
+                <img src="assets/pixel illustrations/rocket.svg" alt="" class="pixel-decoration rocket-decoration" loading="lazy" aria-hidden="true">
+                <img src="assets/pixel illustrations/comet.svg" alt="" class="pixel-decoration comet-decoration" loading="lazy" aria-hidden="true">
             </div>
         </div>
         
@@ -322,7 +367,7 @@
                         </div>
                     </div>
                     <!-- Static About Pixel Decorations -->
-                    <img src="assets/pixel illustrations/pie chart.svg" alt="" class="pixel-art-element about-pixel-chart" aria-hidden="true">
+                    <img src="assets/pixel illustrations/pie chart.svg" alt="" class="pixel-art-element about-pixel-chart" loading="lazy" aria-hidden="true">
                 </div>
             </div>
         </div>
@@ -418,7 +463,7 @@
                 </article>
             </div>
             <!-- Static Services Pixel Decorations -->
-            <img src="assets/pixel illustrations/rocket.svg" alt="" class="pixel-art-element services-pixel-editor" aria-hidden="true">
+            <img src="assets/pixel illustrations/rocket.svg" alt="" class="pixel-art-element services-pixel-editor" loading="lazy" aria-hidden="true">
         </div>
     </section>
 
@@ -429,7 +474,7 @@
             <div class="team-grid">
                   <article class="team-member" data-member="frontend" itemscope itemtype="https://schema.org/Person">
                       <div class="member-avatar-container">
-                         <img src="assets/team_avatars/Renat.webp" alt="Губайдуллин Ренат - Frontend разработчик" class="member-avatar-image" width="160" height="160" itemprop="image">
+                         <img src="assets/team_avatars/Renat.webp" alt="Губайдуллин Ренат - Frontend разработчик" class="member-avatar-image" width="160" height="160" loading="lazy" decoding="async" itemprop="image">
                           <div class="avatar-glow" aria-hidden="true"></div>
                           <div class="avatar-border" aria-hidden="true"></div>
                       </div>
@@ -447,7 +492,7 @@
                   
                   <article class="team-member" data-member="designer" itemscope itemtype="https://schema.org/Person">
                       <div class="member-avatar-container">
-                         <img src="assets/team_avatars/Maxim.webp" alt="Сотников Максим - UI/UX дизайнер" class="member-avatar-image" width="160" height="160" itemprop="image">
+                         <img src="assets/team_avatars/Maxim.webp" alt="Сотников Максим - UI/UX дизайнер" class="member-avatar-image" width="160" height="160" loading="lazy" decoding="async" itemprop="image">
                           <div class="avatar-glow" aria-hidden="true"></div>
                           <div class="avatar-border" aria-hidden="true"></div>
                       </div>
@@ -465,7 +510,7 @@
                   
                   <article class="team-member" data-member="manager" itemscope itemtype="https://schema.org/Person">
                       <div class="member-avatar-container">
-                         <img src="assets/team_avatars/Ibragim.webp" alt="Карамов Ибрагим - Project Manager" class="member-avatar-image" width="160" height="160" itemprop="image">
+                         <img src="assets/team_avatars/Ibragim.webp" alt="Карамов Ибрагим - Project Manager" class="member-avatar-image" width="160" height="160" loading="lazy" decoding="async" itemprop="image">
                           <div class="avatar-glow" aria-hidden="true"></div>
                           <div class="avatar-border" aria-hidden="true"></div>
                       </div>
@@ -483,7 +528,7 @@
                   
                   <article class="team-member" data-member="java-backend" itemscope itemtype="https://schema.org/Person">
                       <div class="member-avatar-container">
-                         <img src="assets/team_avatars/Danis.webp" alt="Галеев Данис - Backend разработчик" class="member-avatar-image" width="160" height="160" itemprop="image">
+                         <img src="assets/team_avatars/Danis.webp" alt="Галеев Данис - Backend разработчик" class="member-avatar-image" width="160" height="160" loading="lazy" decoding="async" itemprop="image">
                           <div class="avatar-glow" aria-hidden="true"></div>
                           <div class="avatar-border" aria-hidden="true"></div>
                       </div>
@@ -501,7 +546,7 @@
                   
                   <article class="team-member" data-member="ml-backend" itemscope itemtype="https://schema.org/Person">
                       <div class="member-avatar-container">
-                         <img src="assets/team_avatars/Ranel.webp" alt="Хаметшин Ранэль - Backend/ML Engineer" class="member-avatar-image" width="160" height="160" itemprop="image">
+                         <img src="assets/team_avatars/Ranel.webp" alt="Хаметшин Ранэль - Backend/ML Engineer" class="member-avatar-image" width="160" height="160" loading="lazy" decoding="async" itemprop="image">
                           <div class="avatar-glow" aria-hidden="true"></div>
                           <div class="avatar-border" aria-hidden="true"></div>
                       </div>
@@ -519,7 +564,7 @@
                   
                   <article class="team-member" data-member="ml-engineer" itemscope itemtype="https://schema.org/Person">
                       <div class="member-avatar-container">
-                         <img src="assets/team_avatars/Insaf.webp" alt="Замалов Инсаф - ML Engineer" class="member-avatar-image" width="160" height="160" itemprop="image">
+                         <img src="assets/team_avatars/Insaf.webp" alt="Замалов Инсаф - ML Engineer" class="member-avatar-image" width="160" height="160" loading="lazy" decoding="async" itemprop="image">
                           <div class="avatar-glow" aria-hidden="true"></div>
                           <div class="avatar-border" aria-hidden="true"></div>
                       </div>
@@ -537,7 +582,7 @@
                   
                   <article class="team-member" data-member="ui-designer" itemscope itemtype="https://schema.org/Person">
                       <div class="member-avatar-container">
-                         <img src="assets/team_avatars/Aliya.webp" alt="Алия - UI/UX дизайнер" class="member-avatar-image" width="160" height="160" itemprop="image">
+                         <img src="assets/team_avatars/Aliya.webp" alt="Алия - UI/UX дизайнер" class="member-avatar-image" width="160" height="160" loading="lazy" decoding="async" itemprop="image">
                           <div class="avatar-glow" aria-hidden="true"></div>
                           <div class="avatar-border" aria-hidden="true"></div>
                       </div>

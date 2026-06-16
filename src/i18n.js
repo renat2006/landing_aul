@@ -25,6 +25,10 @@ class I18n {
     this._applyToDOM();
     this._updateHTMLLang();
     this._updateMetaTags();
+
+    // Async geo-detection via Cloudflare (enhances first visit only)
+    this._detectCountryAndApply();
+
     return this;
   }
 
@@ -40,7 +44,7 @@ class I18n {
       return urlLang;
     }
 
-    // 2. localStorage
+    // 2. localStorage (user has previously chosen a language)
     const stored = localStorage.getItem('itaul-lang');
     if (stored && this.locales[stored]) {
       return stored;
@@ -54,6 +58,50 @@ class I18n {
 
     // 4. Fallback
     return this.fallbackLocale;
+  }
+
+  /**
+   * Cloudflare geo-detection — async enhancement for first-time visitors
+   * Uses /cdn-cgi/trace (free on all Cloudflare Pages sites)
+   * Only applies if user hasn't explicitly set a language (no localStorage)
+   */
+  async _detectCountryAndApply() {
+    // Skip if user already chose a language or URL param is set
+    const stored = localStorage.getItem('itaul-lang');
+    const urlLang = new URLSearchParams(window.location.search).get('lang');
+    if (stored || urlLang) return;
+
+    const country = await this._getUserCountry();
+    if (!country) return;
+
+    // Map country codes to supported locales
+    const countryToLocale = {
+      RU: 'ru', BY: 'ru', KZ: 'ru', UA: 'ru', KG: 'ru', UZ: 'ru',
+      US: 'en', GB: 'en', AU: 'en', CA: 'en', NZ: 'en', IE: 'en', IN: 'en',
+      CN: 'zh', TW: 'zh', HK: 'zh', SG: 'zh',
+      DE: 'de', AT: 'de', CH: 'de',
+      ES: 'es', MX: 'es', AR: 'es', CO: 'es', CL: 'es', PE: 'es',
+    };
+
+    const detectedLocale = countryToLocale[country];
+    if (detectedLocale && detectedLocale !== this.currentLocale && this.locales[detectedLocale]) {
+      this.setLocale(detectedLocale);
+    }
+  }
+
+  /**
+   * Fetch user country from Cloudflare /cdn-cgi/trace
+   * @returns {Promise<string|null>} ISO country code ('RU', 'US', 'DE', etc.) or null
+   */
+  async _getUserCountry() {
+    try {
+      const res = await fetch('/cdn-cgi/trace');
+      const text = await res.text();
+      const match = text.match(/loc=(\w+)/);
+      return match ? match[1] : null;
+    } catch {
+      return null;
+    }
   }
 
   /**

@@ -127,6 +127,9 @@ document.addEventListener('DOMContentLoaded', function() {
     initializePixelEffects();
     // Initialize scroll indicator
     initScrollIndicator();
+    // Auto-year in footer
+    const yearEl = document.getElementById('footer-year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.getElementById('nav-menu');
     

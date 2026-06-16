@@ -1,0 +1,127 @@
+{
+  "meta": {
+    "title": "IT-AUL — Award-Winning Dev Team | Web, Mobile, AI & MVP Development",
+    "description": "IT-AUL — a dev team with 6 hackathon prizes at top Russian tech competitions (MTS, Yandex). AI startup founders. 3 international expos. Rapid MVP delivery in 4–8 weeks.",
+    "ogTitle": "IT-AUL — Award-Winning Development Team | Web & Mobile Apps",
+    "ogDescription": "6 hackathon prizes at MTS & Yandex. AI startup founders in travel tech. 3 international exhibitions. Rapid MVP in 4–8 weeks.",
+    "twitterTitle": "IT-AUL — Award-Winning Dev Team",
+    "twitterDescription": "6 hackathon prizes at MTS & Yandex. AI startup founders. 3 international exhibitions."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "team": "Team",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "6 hackathon prizes · 3 international exhibitions",
+    "titleAccent": "Dev Team",
+    "titleSub": "Winning hackathons. Shipping products.",
+    "descriptionPre": "A team of ",
+    "descriptionMid": " developers with prizes at ",
+    "descriptionHighlight": "MTS & Yandex",
+    "descriptionPost": " hackathons — Russia's top tech companies. Building our own AI startup in travel tech. Ready to bring your idea to life.",
+    "statWins": "Wins",
+    "statHackathons": "Hackathons",
+    "statStartup": "Startup",
+    "btnOrder": "Start a project",
+    "btnServices": "Our services",
+    "scrollMore": "Learn more"
+  },
+  "about": {
+    "sectionTitle": "We Win. We Build. We Ship.",
+    "achievementsTitle": "Our Track Record",
+    "achievementsText": "We don't just write code — we build products. Currently developing our own AI startup in travel tech. Ready to rapidly turn your idea into a working product.",
+    "hackathonsHeader": "Hackathons — 6 prizes",
+    "exhibitionsHeader": "Exhibitions — 3 events",
+    "firstPlace": "1st place",
+    "secondPlace": "2nd place",
+    "prize": "Prize",
+    "achievement1Name": "Yandex Education '25",
+    "achievement1Meta": "2025 • Yandex (Russia's leading tech company)",
+    "achievement2Name": "Tatar.Bu '24",
+    "achievement2Meta": "2024 • Regional digital services hackathon",
+    "achievement3Name": "Tatar.Bu '25",
+    "achievement3Meta": "2025 • Regional digital services hackathon",
+    "achievement4Name": "MTS True Tech '25",
+    "achievement4Meta": "2025 • MTS (Russia's largest telecom)",
+    "achievement5Name": "ArtScience '25",
+    "achievement5Meta": "2025 • Art & technology hackathon",
+    "exhibition1Name": "Kazan Digital Forum '24",
+    "exhibition1Meta": "2024 • AI travel startup showcase",
+    "exhibition2Name": "Kazan Digital Forum '25",
+    "exhibition2Meta": "2025 • AI travel startup showcase",
+    "exhibition3Name": "\"Ya v Dele\" '25",
+    "exhibition3Meta": "2025 • Youth entrepreneurship program",
+    "statDevelopers": "Developers",
+    "statProjects": "Projects",
+    "statExhibitions": "Exhibitions"
+  },
+  "services": {
+    "sectionTitle": "Our Services",
+    "web": {
+      "title": "Web Development",
+      "description": "Modern, fast, and responsive web applications built with cutting-edge technologies",
+      "list": ["React, JavaScript, Next.js", "PWA, responsive design", "Modern UI libraries"]
+    },
+    "mobile": {
+      "title": "Mobile Applications",
+      "description": "Cross-platform mobile apps for iOS and Android — one codebase, all platforms",
+      "list": ["Flutter, React Native", "Progressive Web Apps", "Cross-platform development"]
+    },
+    "mvp": {
+      "title": "Rapid MVP Development",
+      "description": "MVP in 4–8 weeks. Speed honed at hackathons and proven with our own startup",
+      "list": ["Idea to launch in 4–8 weeks", "Hypothesis validation", "Product-first approach"]
+    },
+    "design": {
+      "title": "UI/UX Design",
+      "description": "Intuitive, visually striking user interfaces that drive engagement",
+      "list": ["Figma, responsive design", "Branding, prototyping", "User research"]
+    },
+    "consulting": {
+      "title": "Consulting & Analytics",
+      "description": "Product analytics, technical expertise, and project planning",
+      "list": ["Product analytics", "Technical consulting", "Agile, Scrum"]
+    },
+    "ai": {
+      "title": "Machine Learning & AI",
+      "description": "AI agents, personalization, and ML integration. Backed by real AI startup experience",
+      "list": ["LangChain, AI agents", "Personalization & recommendations", "Python ML, Go"]
+    },
+    "backend": {
+      "title": "Backend Development",
+      "description": "Reliable server-side solutions with modern, scalable architecture",
+      "list": ["Java Spring, Python, Go", "REST API", "Database design"]
+    }
+  },
+  "team": {
+    "sectionTitle": "Our Team"
+  },
+  "contact": {
+    "sectionTitle": "Get In Touch",
+    "heading": "Ready to discuss your project?",
+    "text": "Reach out to our project leads to discuss technical solutions and planning.",
+    "person1Role": "Technical Lead",
+    "person2Role": "Project Management",
+    "channelTitle": "Our Channel",
+    "channelDesc": "News & projects",
+    "formName": "Your name",
+    "formEmail": "Email",
+    "formSubject": "Project topic",
+    "formMessage": "Tell us about your project",
+    "formSubmit": "Send message",
+    "formSending": "Sending...",
+    "formSuccess": "Email client opened! Send the message to get in touch.",
+    "emailSubjectPrefix": "New inquiry from",
+    "emailBodyName": "Name",
+    "emailBodyEmail": "Email",
+    "emailBodySubject": "Subject",
+    "emailBodyMessage": "Message",
+    "emailBodyFooter": "Sent from IT-AUL website"
+  },
+  "footer": {
+    "copyright": "© 2025 IT-AUL. All rights reserved."
+  }
+}

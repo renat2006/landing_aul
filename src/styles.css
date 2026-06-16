@@ -226,6 +226,68 @@ h3 {
 }
 
 /* =================
+   Language Switcher
+   ================= */
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    background: rgba(221, 217, 42, 0.08);
+    border: 1px solid rgba(221, 217, 42, 0.25);
+    border-radius: 8px;
+    padding: 3px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    margin-left: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.lang-option {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: var(--font-pixel);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 6px;
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+}
+
+.lang-option:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.lang-option.active {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    box-shadow: 0 0 12px rgba(221, 217, 42, 0.4),
+                0 0 4px rgba(221, 217, 42, 0.6);
+}
+
+.lang-option.active:hover {
+    box-shadow: 0 0 16px rgba(221, 217, 42, 0.6),
+                0 0 6px rgba(221, 217, 42, 0.8);
+}
+
+/* i18n text transition */
+[data-i18n],
+[data-i18n-html] {
+    transition: opacity 0.2s ease;
+}
+
+.i18n-switching [data-i18n],
+.i18n-switching [data-i18n-html] {
+    opacity: 0.6;
+}
+
+/* =================
    Hero Section
    ================= */
 .hero {
@@ -1537,6 +1599,14 @@ h3 {
 
     .nav-toggle {
         display: flex;
+    }
+
+    .lang-switcher {
+        position: absolute;
+        right: 60px;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: 0;
     }
 
     /* Hero Mobile Styles */

@@ -1,15 +1,23 @@
 User-agent: *
 Allow: /
 
-# Yandex
-User-agent: Yandex
-Allow: /
-
 # Google
 User-agent: Googlebot
 Allow: /
 
-# Блокируем индексацию технических файлов
+# Bing
+User-agent: Bingbot
+Allow: /
+
+# Yandex
+User-agent: Yandex
+Allow: /
+
+# Apple
+User-agent: Applebot
+Allow: /
+
+# Block technical files from indexing
 Disallow: /webpack.config.js
 Disallow: /package.json
 Disallow: /node_modules/
@@ -19,6 +27,3 @@ Disallow: /dist/
 
 # Sitemap
 Sitemap: https://it-aul.dev/sitemap.xml
-
-# Crawl-delay для корректной работы с Яндексом
-Crawl-delay: 1 

@@ -2,6 +2,45 @@
 import './styles.css';
 import './pixel-icons.css';
 
+// Import i18n
+import i18n from './i18n.js';
+
+// =================
+// i18n Initialization
+// =================
+function initI18n() {
+    i18n.init();
+
+    // Language switcher click handlers
+    const switcher = document.getElementById('lang-switcher');
+    if (switcher) {
+        switcher.addEventListener('click', function(e) {
+            const btn = e.target.closest('.lang-option');
+            if (!btn) return;
+            const lang = btn.getAttribute('data-lang');
+            if (lang) {
+                i18n.setLocale(lang);
+            }
+        });
+    }
+
+    // Update switcher UI on init
+    i18n._updateSwitcher();
+
+    // Re-trigger counter animations on language change
+    i18n.onLanguageChange(() => {
+        // Reset counters so they re-animate
+        document.querySelectorAll('.stat-number').forEach(counter => {
+            counter.removeAttribute('data-animated');
+        });
+        // Re-observe stats sections
+        const heroStats = document.querySelector('.hero-stats');
+        if (heroStats) heroStatsObserver.observe(heroStats);
+        const aboutStats = document.querySelector('.about .stats');
+        if (aboutStats) aboutStatsObserver.observe(aboutStats);
+    });
+}
+
 // =================
 // Pixel Decorations
 // =================
@@ -87,7 +126,9 @@ function initScrollIndicator() {
 // Navigation
 // =================
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize pixel effects first
+    // Initialize i18n first
+    initI18n();
+    // Initialize pixel effects
     initializePixelEffects();
     // Initialize scroll indicator
     initScrollIndicator();
@@ -326,8 +367,9 @@ class AchievementsManager {
 
     
     formatDate(dateString) {
+        const locale = i18n.getLocale() === 'en' ? 'en-US' : 'ru-RU';
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
-        return new Date(dateString).toLocaleDateString('ru-RU', options);
+        return new Date(dateString).toLocaleDateString(locale, options);
     }
     
     showNotification(message, type = 'success') {
@@ -386,17 +428,17 @@ document.addEventListener('DOMContentLoaded', function() {
             // Add loading state
             const submitBtn = this.querySelector('button[type="submit"]');
             const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Отправляем...';
+            submitBtn.textContent = i18n.t('contact.formSending');
             submitBtn.disabled = true;
             
             // Send email using mailto
-            const emailSubject = encodeURIComponent(`Новая заявка от ${data.name}: ${data.subject}`);
+            const emailSubject = encodeURIComponent(`${i18n.t('contact.emailSubjectPrefix')} ${data.name}: ${data.subject}`);
             const emailBody = encodeURIComponent(
-                `Имя: ${data.name}\n` +
-                `Email: ${data.email}\n` +
-                `Тема: ${data.subject}\n\n` +
-                `Сообщение:\n${data.message}\n\n` +
-                `---\nОтправлено с лендинга IT-AUL`
+                `${i18n.t('contact.emailBodyName')}: ${data.name}\n` +
+                `${i18n.t('contact.emailBodyEmail')}: ${data.email}\n` +
+                `${i18n.t('contact.emailBodySubject')}: ${data.subject}\n\n` +
+                `${i18n.t('contact.emailBodyMessage')}:\n${data.message}\n\n` +
+                `---\n${i18n.t('contact.emailBodyFooter')}`
             );
             
             // Open mail client
@@ -408,7 +450,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Show success message
                 if (achievementsManager) {
-                    achievementsManager.showNotification('Почтовый клиент открыт! Отправьте сообщение для связи.', 'success');
+                    achievementsManager.showNotification(i18n.t('contact.formSuccess'), 'success');
                 }
                 
                 // Reset button
@@ -649,5 +691,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-
- 

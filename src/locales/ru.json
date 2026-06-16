@@ -1,0 +1,127 @@
+{
+  "meta": {
+    "title": "IT-AUL - Команда разработчиков | Веб-разработка, мобильные приложения, MVP",
+    "description": "IT-AUL — команда разработчиков с 6 призовыми местами на хакатонах МТС и Яндекс. Собственный AI-стартап. 3 международные выставки. MVP за 4-8 недель.",
+    "ogTitle": "IT-AUL - Команда разработчиков | Веб-разработка и мобильные приложения",
+    "ogDescription": "6 призовых мест на хакатонах МТС и Яндекс. Собственный AI-стартап в сфере туризма. 3 международные выставки. MVP за 4-8 недель.",
+    "twitterTitle": "IT-AUL - Команда разработчиков",
+    "twitterDescription": "6 призовых мест на хакатонах МТС и Яндекс. Собственный AI-стартап. 3 международные выставки."
+  },
+  "nav": {
+    "home": "Главная",
+    "about": "О нас",
+    "services": "Услуги",
+    "team": "Команда",
+    "contact": "Контакты"
+  },
+  "hero": {
+    "badge": "6 призовых мест · 3 международные выставки",
+    "titleAccent": "Команда",
+    "titleSub": "Побеждаем на хакатонах. Запускаем продукты.",
+    "descriptionPre": "Команда из ",
+    "descriptionMid": " разработчиков с призовыми местами на хакатонах ",
+    "descriptionHighlight": "МТС и Яндекс",
+    "descriptionPost": ". Строим собственный AI-стартап в сфере туризма. Готовы воплотить вашу идею.",
+    "statWins": "Побед",
+    "statHackathons": "Хакатонов",
+    "statStartup": "Стартап",
+    "btnOrder": "Заказать проект",
+    "btnServices": "Наши услуги",
+    "scrollMore": "Узнать больше"
+  },
+  "about": {
+    "sectionTitle": "Побеждаем. Создаём. Запускаем.",
+    "achievementsTitle": "Наши достижения",
+    "achievementsText": "Мы не просто пишем код — мы создаём продукты. Сейчас разрабатываем собственный AI-стартап в сфере туризма. Готовы быстро и качественно воплотить вашу идею в работающий продукт.",
+    "hackathonsHeader": "Хакатоны — 6 призовых мест",
+    "exhibitionsHeader": "Выставки — 3 события",
+    "firstPlace": "1 место",
+    "secondPlace": "2 место",
+    "prize": "Призовое",
+    "achievement1Name": "Яндекс Образование '25",
+    "achievement1Meta": "2025 • Яндекс",
+    "achievement2Name": "Татар.Бу '24",
+    "achievement2Meta": "2024 • Татар.Бу",
+    "achievement3Name": "Татар.Бу '25",
+    "achievement3Meta": "2025 • Татар.Бу",
+    "achievement4Name": "МТС True Tech '25",
+    "achievement4Meta": "2025 • МТС",
+    "achievement5Name": "ArtScience '25",
+    "achievement5Meta": "2025 • ArtScience",
+    "exhibition1Name": "Kazan Digital Forum '24",
+    "exhibition1Meta": "2024 • AI-стартап в туризме",
+    "exhibition2Name": "Kazan Digital Forum '25",
+    "exhibition2Meta": "2025 • AI-стартап в туризме",
+    "exhibition3Name": "«Я в деле» '25",
+    "exhibition3Meta": "2025 • Молодежное предпринимательство",
+    "statDevelopers": "Разработчиков",
+    "statProjects": "Проектов",
+    "statExhibitions": "Выставки"
+  },
+  "services": {
+    "sectionTitle": "Наши услуги",
+    "web": {
+      "title": "Веб-разработка",
+      "description": "Создаем современные, быстрые и адаптивные веб-сайты с использованием последних технологий",
+      "list": ["React, JavaScript, Next.js", "PWA, адаптивный дизайн", "Современные UI библиотеки"]
+    },
+    "mobile": {
+      "title": "Мобильные приложения",
+      "description": "Разрабатываем кроссплатформенные мобильные приложения для iOS и Android",
+      "list": ["Flutter, React Native", "PWA приложения", "Кроссплатформенная разработка"]
+    },
+    "mvp": {
+      "title": "MVP и прототипы",
+      "description": "MVP за 4-8 недель. Скорость, отточенная на хакатонах и проверенная на собственном стартапе",
+      "list": ["От идеи до запуска за 4-8 недель", "Валидация гипотез", "Продуктовый подход"]
+    },
+    "design": {
+      "title": "UI/UX дизайн",
+      "description": "Создаем интуитивные и привлекательные пользовательские интерфейсы",
+      "list": ["Figma, Адаптивный дизайн", "Брендинг, Прототипирование", "User Research"]
+    },
+    "consulting": {
+      "title": "Консультации & Аналитика",
+      "description": "Продуктовая аналитика, техническая экспертиза и планирование проектов",
+      "list": ["Продуктовая аналитика", "Техническая экспертиза", "Agile, Scrum"]
+    },
+    "ai": {
+      "title": "Machine Learning & AI",
+      "description": "AI-агенты, персонализация, интеграция ML в продукт. Опыт разработки AI-стартапа",
+      "list": ["LangChain, AI-агенты", "Персонализация, рекомендации", "Python ML, Go"]
+    },
+    "backend": {
+      "title": "Backend разработка",
+      "description": "Надежные серверные решения с использованием современных технологий",
+      "list": ["Java Spring, Python, Go", "REST API", "Database Design"]
+    }
+  },
+  "team": {
+    "sectionTitle": "Наша команда"
+  },
+  "contact": {
+    "sectionTitle": "Свяжитесь с нами",
+    "heading": "Готовы обсудить ваш проект?",
+    "text": "Свяжитесь с нашими руководителями проектов для обсуждения технических решений и планирования.",
+    "person1Role": "Техническое руководство",
+    "person2Role": "Управление проектами",
+    "channelTitle": "Наш канал",
+    "channelDesc": "Новости и проекты",
+    "formName": "Ваше имя",
+    "formEmail": "Email",
+    "formSubject": "Тема проекта",
+    "formMessage": "Расскажите о вашем проекте",
+    "formSubmit": "Отправить",
+    "formSending": "Отправляем...",
+    "formSuccess": "Почтовый клиент открыт! Отправьте сообщение для связи.",
+    "emailSubjectPrefix": "Новая заявка от",
+    "emailBodyName": "Имя",
+    "emailBodyEmail": "Email",
+    "emailBodySubject": "Тема",
+    "emailBodyMessage": "Сообщение",
+    "emailBodyFooter": "Отправлено с лендинга IT-AUL"
+  },
+  "footer": {
+    "copyright": "© 2025 IT-AUL. Все права защищены."
+  }
+}

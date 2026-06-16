@@ -18,11 +18,12 @@
     <!-- Primary SEO Meta Tags -->
     <title>IT-AUL - Команда разработчиков | Веб-разработка, мобильные приложения, MVP</title>
     <meta name="description" content="IT-AUL — команда разработчиков с 6 призовыми местами на хакатонах МТС и Яндекс. Собственный AI-стартап. 3 международные выставки. MVP за 4-8 недель.">
-    <meta name="keywords" content="веб-разработка, разработка сайтов, мобильные приложения, MVP, React, JavaScript, команда разработчиков, фриланс разработчики, заказать сайт, IT-услуги">
+    <meta name="keywords" content="web development, mobile apps, MVP, React, JavaScript, dev team, IT services, AI, machine learning, hackathon winners, веб-разработка, разработка сайтов, мобильные приложения">
     <meta name="author" content="IT-AUL Team">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="theme-color" content="#DDD92A">
     <meta name="color-scheme" content="light dark">
+    <meta name="google" content="notranslate">
     
     <!-- Mobile optimization -->
     <meta name="format-detection" content="telephone=no">
@@ -38,8 +39,9 @@
     <meta name="geo.region" content="RU">
     <meta name="geo.placename" content="Россия">
     
-    <!-- Language alternatives -->
+    <!-- Language alternatives (hreflang) -->
     <link rel="alternate" hreflang="ru" href="https://it-aul.dev/">
+    <link rel="alternate" hreflang="en" href="https://it-aul.dev/?lang=en">
     <link rel="alternate" hreflang="x-default" href="https://it-aul.dev/">
     
     <!-- Open Graph / Facebook -->
@@ -50,9 +52,10 @@
     <meta property="og:image" content="https://it-aul.dev/assets/images/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="IT-AUL - Команда разработчиков">
+    <meta property="og:image:alt" content="IT-AUL — Award-Winning Development Team">
     <meta property="og:site_name" content="IT-AUL">
     <meta property="og:locale" content="ru_RU">
+    <meta property="og:locale:alternate" content="en_US">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
@@ -80,13 +83,13 @@
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "IT-AUL",
-      "description": "Профессиональная команда разработчиков, специализирующаяся на веб-разработке, мобильных приложениях и MVP",
+      "description": "Award-winning development team specializing in web, mobile, AI and MVP development",
       "url": "https://it-aul.dev",
       "logo": "https://it-aul.dev/assets/images/Frame 9.svg",
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "customer service",
-        "availableLanguage": "Russian",
+        "availableLanguage": ["Russian", "English"],
         "url": "https://t.me/it_aul"
       },
       "foundingDate": "2023",
@@ -101,29 +104,33 @@
         "https://t.me/KhametshinR",
         "https://t.me/Ch0pperrr"
       ],
+      "knowsLanguage": ["ru", "en"],
       "makesOffer": [
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Веб-разработка",
-            "description": "Создание современных веб-сайтов и приложений"
+            "name": "Web Development",
+            "description": "Modern web applications and sites",
+            "inLanguage": ["ru", "en"]
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Мобильные приложения",
-            "description": "Разработка кроссплатформенных мобильных приложений"
+            "name": "Mobile Applications",
+            "description": "Cross-platform mobile app development",
+            "inLanguage": ["ru", "en"]
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "MVP разработка",
-            "description": "Быстрая разработка минимально жизнеспособных продуктов"
+            "name": "Rapid MVP Development",
+            "description": "Minimum viable products in 4-8 weeks",
+            "inLanguage": ["ru", "en"]
           }
         }
       ]
@@ -137,7 +144,8 @@
       "@type": "WebSite",
       "name": "IT-AUL",
       "url": "https://it-aul.dev",
-      "description": "Команда разработчиков IT-AUL - веб-разработка, мобильные приложения, MVP",
+      "description": "IT-AUL — Award-winning dev team. Web, mobile, AI & MVP development.",
+      "inLanguage": ["ru", "en"],
       "potentialAction": {
         "@type": "SearchAction",
         "target": "https://it-aul.dev/#services",
@@ -168,8 +176,9 @@
         "ratingValue": "5",
         "reviewCount": "9"
       },
-      "areaServed": "RU",
-      "serviceType": ["Веб-разработка", "Мобильные приложения", "MVP разработка", "UI/UX дизайн"]
+      "areaServed": ["RU", "US", "EU"],
+      "availableLanguage": ["Russian", "English"],
+      "serviceType": ["Web Development", "Mobile Applications", "MVP Development", "UI/UX Design", "Machine Learning", "AI Development"]
     }
     </script>
     
@@ -201,15 +210,20 @@
     <nav class="navbar" role="navigation" aria-label="Главная навигация">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="assets/images/Frame 9.svg" alt="IT-AUL Логотип команды разработчиков" class="logo" width="40" height="40">
+                <img src="assets/images/Frame 9.svg" alt="IT-AUL Logo" class="logo" width="40" height="40">
                 <span class="logo-text">IT-AUL</span>
             </div>
             <div class="nav-menu" id="nav-menu">
-                <a href="#hero" class="nav-link" aria-label="Перейти к главной секции">Главная</a>
-                <a href="#about" class="nav-link" aria-label="Узнать о нашей команде">О нас</a>
-                <a href="#services" class="nav-link" aria-label="Посмотреть наши услуги">Услуги</a>
-                <a href="#team" class="nav-link" aria-label="Познакомиться с командой">Команда</a>
-                <a href="#contact" class="nav-link" aria-label="Связаться с нами">Контакты</a>
+                <a href="#hero" class="nav-link" data-i18n="nav.home">Главная</a>
+                <a href="#about" class="nav-link" data-i18n="nav.about">О нас</a>
+                <a href="#services" class="nav-link" data-i18n="nav.services">Услуги</a>
+                <a href="#team" class="nav-link" data-i18n="nav.team">Команда</a>
+                <a href="#contact" class="nav-link" data-i18n="nav.contact">Контакты</a>
+            </div>
+            <!-- Language Switcher -->
+            <div class="lang-switcher" id="lang-switcher" role="group" aria-label="Language selection">
+                <button class="lang-option active" data-lang="ru" aria-label="Русский">RU</button>
+                <button class="lang-option" data-lang="en" aria-label="English">EN</button>
             </div>
             <button class="nav-toggle" id="nav-toggle" aria-label="Открыть мобильное меню" aria-expanded="false">
                 <span class="bar"></span>
@@ -229,42 +243,42 @@
             <div class="hero-content">
                 <div class="hero-badge">
                     <span class="badge-icon" aria-hidden="true">🏆</span>
-                    <span class="badge-text">6 призовых мест · 3 международные выставки</span>
+                    <span class="badge-text" data-i18n="hero.badge">6 призовых мест · 3 международные выставки</span>
                 </div>
                 
                 <h1 class="hero-title">
-                    <span class="title-accent">Команда</span>
+                    <span class="title-accent" data-i18n="hero.titleAccent">Команда</span>
                     <span class="title-main pixel-glitch" data-text="IT-AUL">IT-AUL</span>
-                    <span class="title-sub">Побеждаем на хакатонах. Запускаем продукты.</span>
+                    <span class="title-sub" data-i18n="hero.titleSub">Побеждаем на хакатонах. Запускаем продукты.</span>
                 </h1>
                 
                 <p class="hero-description">
-                    Команда из <span class="highlight-text" id="team-count">7</span> разработчиков с призовыми местами на хакатонах 
-                    <span class="highlight-text">МТС и Яндекс</span>. Строим собственный AI-стартап в сфере туризма. Готовы воплотить вашу идею.
+                    <span data-i18n="hero.descriptionPre">Команда из </span><span class="highlight-text" id="team-count">7</span><span data-i18n="hero.descriptionMid"> разработчиков с призовыми местами на хакатонах </span>
+                    <span class="highlight-text" data-i18n="hero.descriptionHighlight">МТС и Яндекс</span><span data-i18n="hero.descriptionPost">. Строим собственный AI-стартап в сфере туризма. Готовы воплотить вашу идею.</span>
                 </p>
                 
                 <div class="hero-stats" role="group" aria-label="Статистика команды">
                     <div class="stat">
                         <span class="stat-number" data-target="6" aria-live="polite">0</span>
-                        <span class="stat-label">Побед</span>
+                        <span class="stat-label" data-i18n="hero.statWins">Побед</span>
                     </div>
                     <div class="stat">
                         <span class="stat-number" data-target="9" aria-live="polite">0</span>
-                        <span class="stat-label">Хакатонов</span>
+                        <span class="stat-label" data-i18n="hero.statHackathons">Хакатонов</span>
                     </div>
                     <div class="stat">
                         <span class="stat-number" data-target="1" aria-live="polite">0</span>
-                        <span class="stat-label">Стартап</span>
+                        <span class="stat-label" data-i18n="hero.statStartup">Стартап</span>
                     </div>
                 </div>
                 
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary" aria-label="Заказать проект - связаться с командой">
-                        <span class="btn-text">Заказать проект</span>
+                    <a href="#contact" class="btn btn-primary" aria-label="Start a project">
+                        <span class="btn-text" data-i18n="hero.btnOrder">Заказать проект</span>
                         <span class="btn-icon" aria-hidden="true">→</span>
                     </a>
-                    <a href="#services" class="btn btn-secondary" aria-label="Посмотреть наши услуги и технологии">
-                        <span class="btn-text">Наши услуги</span>
+                    <a href="#services" class="btn btn-secondary" aria-label="View our services">
+                        <span class="btn-text" data-i18n="hero.btnServices">Наши услуги</span>
                         <span class="btn-icon" aria-hidden="true">↗</span>
                     </a>
                 </div>
@@ -273,7 +287,7 @@
             <div class="hero-visual">
                 <div class="hero-logo-container">
                     <div class="logo-glow" aria-hidden="true"></div>
-                    <img src="assets/images/Frame 9.svg" alt="IT-AUL главный логотип" class="hero-logo-main" width="200" height="200">
+                    <img src="assets/images/Frame 9.svg" alt="IT-AUL" class="hero-logo-main" width="200" height="200" fetchpriority="high">
                     <div class="logo-orbits" aria-hidden="true">
                         <div class="orbit orbit-1">
                             <div class="orbit-dot"></div>
@@ -310,65 +324,65 @@
         </div>
         
         <!-- Scroll Indicator -->
-        <div class="scroll-indicator" role="button" aria-label="Прокрутить вниз для просмотра содержимого">
+        <div class="scroll-indicator" role="button" aria-label="Scroll down">
             <div class="scroll-arrow" aria-hidden="true"></div>
-            <span>Узнать больше</span>
+            <span data-i18n="hero.scrollMore">Узнать больше</span>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about" role="main">
         <div class="container">
-            <h2 class="section-title">Побеждаем. Создаём. Запускаем.</h2>
+            <h2 class="section-title" data-i18n="about.sectionTitle">Побеждаем. Создаём. Запускаем.</h2>
             <div class="about-grid">
                 <div class="about-text">
-                    <h3>Наши достижения</h3>
-                    <p>Мы не просто пишем код — мы создаём продукты. Сейчас разрабатываем собственный AI-стартап в сфере туризма. Готовы быстро и качественно воплотить вашу идею в работающий продукт.</p>
+                    <h3 data-i18n="about.achievementsTitle">Наши достижения</h3>
+                    <p data-i18n="about.achievementsText">Мы не просто пишем код — мы создаём продукты. Сейчас разрабатываем собственный AI-стартап в сфере туризма. Готовы быстро и качественно воплотить вашу идею в работающий продукт.</p>
                     
                     <div class="achievements-section">
                         <div class="achievements-compact">
                             <div class="achievement-category-header">
                                 <span class="achievement-category-icon pixel-icon pixel-trophy" aria-hidden="true"></span>
-                                <span class="achievement-category-title">Хакатоны — 6 призовых мест</span>
+                                <span class="achievement-category-title" data-i18n="about.hackathonsHeader">Хакатоны — 6 призовых мест</span>
                             </div>
                             
                             <div class="achievement-item-compact">
                                 <div class="achievement-content-compact">
-                                    <span class="achievement-badge-compact achievement-first">1 место</span>
-                                    <strong>Яндекс Образование '25</strong>
-                                    <span class="achievement-meta">2025 • Яндекс</span>
+                                    <span class="achievement-badge-compact achievement-first" data-i18n="about.firstPlace">1 место</span>
+                                    <strong data-i18n="about.achievement1Name">Яндекс Образование '25</strong>
+                                    <span class="achievement-meta" data-i18n="about.achievement1Meta">2025 • Яндекс</span>
                                 </div>
                             </div>
                             
                             <div class="achievement-item-compact">
                                 <div class="achievement-content-compact">
-                                    <span class="achievement-badge-compact achievement-first">1 место</span>
-                                    <strong>Татар.Бу '24</strong>
-                                    <span class="achievement-meta">2024 • Татар.Бу</span>
+                                    <span class="achievement-badge-compact achievement-first" data-i18n="about.firstPlace">1 место</span>
+                                    <strong data-i18n="about.achievement2Name">Татар.Бу '24</strong>
+                                    <span class="achievement-meta" data-i18n="about.achievement2Meta">2024 • Татар.Бу</span>
                                 </div>
                             </div>
                             
                             <div class="achievement-item-compact">
                                 <div class="achievement-content-compact">
-                                    <span class="achievement-badge-compact achievement-second">2 место</span>
-                                    <strong>Татар.Бу '25</strong>
-                                    <span class="achievement-meta">2025 • Татар.Бу</span>
+                                    <span class="achievement-badge-compact achievement-second" data-i18n="about.secondPlace">2 место</span>
+                                    <strong data-i18n="about.achievement3Name">Татар.Бу '25</strong>
+                                    <span class="achievement-meta" data-i18n="about.achievement3Meta">2025 • Татар.Бу</span>
                                 </div>
                             </div>
                             
                             <div class="achievement-item-compact">
                                 <div class="achievement-content-compact">
-                                    <span class="achievement-badge-compact achievement-prize">Призовое</span>
-                                    <strong>МТС True Tech '25</strong>
-                                    <span class="achievement-meta">2025 • МТС</span>
+                                    <span class="achievement-badge-compact achievement-prize" data-i18n="about.prize">Призовое</span>
+                                    <strong data-i18n="about.achievement4Name">МТС True Tech '25</strong>
+                                    <span class="achievement-meta" data-i18n="about.achievement4Meta">2025 • МТС</span>
                                 </div>
                             </div>
                             
                             <div class="achievement-item-compact">
                                 <div class="achievement-content-compact">
-                                    <span class="achievement-badge-compact achievement-prize">Призовое</span>
-                                    <strong>ArtScience '25</strong>
-                                    <span class="achievement-meta">2025 • ArtScience</span>
+                                    <span class="achievement-badge-compact achievement-prize" data-i18n="about.prize">Призовое</span>
+                                    <strong data-i18n="about.achievement5Name">ArtScience '25</strong>
+                                    <span class="achievement-meta" data-i18n="about.achievement5Meta">2025 • ArtScience</span>
                                 </div>
                             </div>
                             
@@ -376,50 +390,50 @@
                             
                             <div class="achievement-category-header">
                                 <span class="achievement-category-icon pixel-icon pixel-exhibition" aria-hidden="true"></span>
-                                <span class="achievement-category-title">Выставки — 3 события</span>
+                                <span class="achievement-category-title" data-i18n="about.exhibitionsHeader">Выставки — 3 события</span>
                             </div>
                             
                             <div class="achievement-item-compact">
                                 <div class="achievement-content-compact">
-                                    <strong>Kazan Digital Forum '24</strong>
-                                    <span class="achievement-meta">2024 • AI-стартап в туризме</span>
+                                    <strong data-i18n="about.exhibition1Name">Kazan Digital Forum '24</strong>
+                                    <span class="achievement-meta" data-i18n="about.exhibition1Meta">2024 • AI-стартап в туризме</span>
                                 </div>
                             </div>
                             
                             <div class="achievement-item-compact">
                                 <div class="achievement-content-compact">
-                                    <strong>Kazan Digital Forum '25</strong>
-                                    <span class="achievement-meta">2025 • AI-стартап в туризме</span>
+                                    <strong data-i18n="about.exhibition2Name">Kazan Digital Forum '25</strong>
+                                    <span class="achievement-meta" data-i18n="about.exhibition2Meta">2025 • AI-стартап в туризме</span>
                                 </div>
                             </div>
                             
                             <div class="achievement-item-compact">
                                 <div class="achievement-content-compact">
-                                    <strong>«Я в деле» '25</strong>
-                                    <span class="achievement-meta">2025 • Молодежное предпринимательство</span>
+                                    <strong data-i18n="about.exhibition3Name">«Я в деле» '25</strong>
+                                    <span class="achievement-meta" data-i18n="about.exhibition3Meta">2025 • Молодежное предпринимательство</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="stats" role="group" aria-label="Статистика о команде">
+                    <div class="stats" role="group" aria-label="Team statistics">
                         <div class="stat-item">
                             <span class="stat-number" data-target="7" aria-live="polite">0</span>
-                            <span class="stat-label">Разработчиков</span>
+                            <span class="stat-label" data-i18n="about.statDevelopers">Разработчиков</span>
                         </div>
                         <div class="stat-item">
                             <span class="stat-number" id="developers-count" data-target="9" aria-live="polite">0</span>
-                            <span class="stat-label">Проектов</span>
+                            <span class="stat-label" data-i18n="about.statProjects">Проектов</span>
                         </div>
                         <div class="stat-item">
                             <span class="stat-number" data-target="3" aria-live="polite">0</span>
-                            <span class="stat-label">Выставки</span>
+                            <span class="stat-label" data-i18n="about.statExhibitions">Выставки</span>
                         </div>
                     </div>
                 </div>
                 <div class="about-visual">
                     <!-- Static About Pixel Decorations -->
                     <img src="assets/pixel illustrations/pie chart.svg" alt="" class="pixel-art-element about-pixel-chart" loading="lazy" aria-hidden="true">
-                    <div class="code-block" role="img" aria-label="Пример кода команды IT-AUL">
+                    <div class="code-block" role="img" aria-label="Code sample">
                         <div class="code-header">
                             <div class="code-dots" aria-hidden="true">
                                 <span></span>
@@ -453,73 +467,73 @@
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
-            <h2 class="section-title">Наши услуги</h2>
+            <h2 class="section-title" data-i18n="services.sectionTitle">Наши услуги</h2>
             <div class="services-grid">
                 <article class="service-card" itemscope itemtype="https://schema.org/Service">
                     <div class="service-icon pixel-icon pixel-web" aria-hidden="true"></div>
-                    <h3 itemprop="name">Веб-разработка</h3>
-                    <p itemprop="description">Создаем современные, быстрые и адаптивные веб-сайты с использованием последних технологий</p>
-                    <ul class="service-list" aria-label="Технологии веб-разработки">
+                    <h3 itemprop="name" data-i18n="services.web.title">Веб-разработка</h3>
+                    <p itemprop="description" data-i18n="services.web.description">Создаем современные, быстрые и адаптивные веб-сайты с использованием последних технологий</p>
+                    <ul class="service-list" data-i18n-list="services.web.list">
                         <li>React, JavaScript, Next.js</li>
                         <li>PWA, адаптивный дизайн</li>
                         <li>Современные UI библиотеки</li>
                     </ul>
-                    <meta itemprop="serviceType" content="Веб-разработка">
+                    <meta itemprop="serviceType" content="Web Development">
                 </article>
                 
                 <article class="service-card" itemscope itemtype="https://schema.org/Service">
                     <div class="service-icon pixel-icon pixel-mobile" aria-hidden="true"></div>
-                    <h3 itemprop="name">Мобильные приложения</h3>
-                    <p itemprop="description">Разрабатываем кроссплатформенные мобильные приложения для iOS и Android</p>
-                    <ul class="service-list" aria-label="Технологии мобильной разработки">
+                    <h3 itemprop="name" data-i18n="services.mobile.title">Мобильные приложения</h3>
+                    <p itemprop="description" data-i18n="services.mobile.description">Разрабатываем кроссплатформенные мобильные приложения для iOS и Android</p>
+                    <ul class="service-list" data-i18n-list="services.mobile.list">
                         <li>Flutter, React Native</li>
                         <li>PWA приложения</li>
                         <li>Кроссплатформенная разработка</li>
                     </ul>
-                    <meta itemprop="serviceType" content="Мобильные приложения">
+                    <meta itemprop="serviceType" content="Mobile Applications">
                 </article>
                 
                 <article class="service-card" itemscope itemtype="https://schema.org/Service">
                     <div class="service-icon pixel-icon pixel-mvp" aria-hidden="true"></div>
-                    <h3 itemprop="name">MVP и прототипы</h3>
-                    <p itemprop="description">MVP за 4-8 недель. Скорость, отточенная на хакатонах и проверенная на собственном стартапе</p>
-                    <ul class="service-list" aria-label="Подход к MVP разработке">
+                    <h3 itemprop="name" data-i18n="services.mvp.title">MVP и прототипы</h3>
+                    <p itemprop="description" data-i18n="services.mvp.description">MVP за 4-8 недель. Скорость, отточенная на хакатонах и проверенная на собственном стартапе</p>
+                    <ul class="service-list" data-i18n-list="services.mvp.list">
                         <li>От идеи до запуска за 4-8 недель</li>
                         <li>Валидация гипотез</li>
                         <li>Продуктовый подход</li>
                     </ul>
-                    <meta itemprop="serviceType" content="MVP разработка">
+                    <meta itemprop="serviceType" content="MVP Development">
                 </article>
                 
                 <article class="service-card" itemscope itemtype="https://schema.org/Service">
                     <div class="service-icon pixel-icon pixel-design" aria-hidden="true"></div>
-                    <h3 itemprop="name">UI/UX дизайн</h3>
-                    <p itemprop="description">Создаем интуитивные и привлекательные пользовательские интерфейсы</p>
-                    <ul class="service-list" aria-label="Инструменты дизайна">
+                    <h3 itemprop="name" data-i18n="services.design.title">UI/UX дизайн</h3>
+                    <p itemprop="description" data-i18n="services.design.description">Создаем интуитивные и привлекательные пользовательские интерфейсы</p>
+                    <ul class="service-list" data-i18n-list="services.design.list">
                         <li>Figma, Адаптивный дизайн</li>
                         <li>Брендинг, Прототипирование</li>
                         <li>User Research</li>
                     </ul>
-                    <meta itemprop="serviceType" content="UI/UX дизайн">
+                    <meta itemprop="serviceType" content="UI/UX Design">
                 </article>
                 
                 <article class="service-card" itemscope itemtype="https://schema.org/Service">
                     <div class="service-icon pixel-icon pixel-consulting" aria-hidden="true"></div>
-                    <h3 itemprop="name">Консультации & Аналитика</h3>
-                    <p itemprop="description">Продуктовая аналитика, техническая экспертиза и планирование проектов</p>
-                    <ul class="service-list" aria-label="Виды консультаций">
+                    <h3 itemprop="name" data-i18n="services.consulting.title">Консультации &amp; Аналитика</h3>
+                    <p itemprop="description" data-i18n="services.consulting.description">Продуктовая аналитика, техническая экспертиза и планирование проектов</p>
+                    <ul class="service-list" data-i18n-list="services.consulting.list">
                         <li>Продуктовая аналитика</li>
                         <li>Техническая экспертиза</li>
                         <li>Agile, Scrum</li>
                     </ul>
-                    <meta itemprop="serviceType" content="IT консультации">
+                    <meta itemprop="serviceType" content="IT Consulting">
                 </article>
                 
                 <article class="service-card" itemscope itemtype="https://schema.org/Service">
                     <div class="service-icon pixel-icon pixel-ai" aria-hidden="true"></div>
-                    <h3 itemprop="name">Machine Learning & AI</h3>
-                    <p itemprop="description">AI-агенты, персонализация, интеграция ML в продукт. Опыт разработки AI-стартапа</p>
-                    <ul class="service-list" aria-label="AI технологии">
+                    <h3 itemprop="name" data-i18n="services.ai.title">Machine Learning &amp; AI</h3>
+                    <p itemprop="description" data-i18n="services.ai.description">AI-агенты, персонализация, интеграция ML в продукт. Опыт разработки AI-стартапа</p>
+                    <ul class="service-list" data-i18n-list="services.ai.list">
                         <li>LangChain, AI-агенты</li>
                         <li>Персонализация, рекомендации</li>
                         <li>Python ML, Go</li>
@@ -529,14 +543,14 @@
                 
                 <article class="service-card" itemscope itemtype="https://schema.org/Service">
                     <div class="service-icon pixel-icon pixel-backend" aria-hidden="true"></div>
-                    <h3 itemprop="name">Backend разработка</h3>
-                    <p itemprop="description">Надежные серверные решения с использованием современных технологий</p>
-                    <ul class="service-list" aria-label="Backend технологии">
+                    <h3 itemprop="name" data-i18n="services.backend.title">Backend разработка</h3>
+                    <p itemprop="description" data-i18n="services.backend.description">Надежные серверные решения с использованием современных технологий</p>
+                    <ul class="service-list" data-i18n-list="services.backend.list">
                         <li>Java Spring, Python, Go</li>
                         <li>REST API</li>
                         <li>Database Design</li>
                     </ul>
-                    <meta itemprop="serviceType" content="Backend разработка">
+                    <meta itemprop="serviceType" content="Backend Development">
                 </article>
             </div>
             <!-- Static Services Pixel Decorations -->
@@ -547,18 +561,18 @@
     <!-- Team Section -->
     <section id="team" class="team">
         <div class="container">
-            <h2 class="section-title">Наша команда</h2>
+            <h2 class="section-title" data-i18n="team.sectionTitle">Наша команда</h2>
             <div class="team-grid">
                   <article class="team-member" data-member="frontend" itemscope itemtype="https://schema.org/Person">
                       <div class="member-avatar-container">
-                         <img src="assets/team_avatars/Renat.webp" alt="Губайдуллин Ренат - Frontend разработчик" class="member-avatar-image" width="160" height="160" loading="lazy" decoding="async" itemprop="image">
+                         <img src="assets/team_avatars/Renat.webp" alt="Губайдуллин Ренат - Frontend Developer" class="member-avatar-image" width="160" height="160" loading="lazy" decoding="async" itemprop="image">
                           <div class="avatar-glow" aria-hidden="true"></div>
                           <div class="avatar-border" aria-hidden="true"></div>
                       </div>
                       <div class="member-info">
                           <h3 itemprop="name">Губайдуллин Ренат</h3>
                           <p class="member-role" itemprop="jobTitle">Frontend Developer</p>
-                          <div class="member-skills" aria-label="Навыки разработчика">
+                          <div class="member-skills" aria-label="Skills">
                               <span class="skill-tag">React</span>
                               <span class="skill-tag">JavaScript</span>
                               <span class="skill-tag">TypeScript</span>
@@ -569,14 +583,14 @@
                   
                   <article class="team-member" data-member="designer" itemscope itemtype="https://schema.org/Person">
                       <div class="member-avatar-container">
-                         <img src="assets/team_avatars/Maxim.webp" alt="Сотников Максим - UI/UX дизайнер" class="member-avatar-image" width="160" height="160" loading="lazy" decoding="async" itemprop="image">
+                         <img src="assets/team_avatars/Maxim.webp" alt="Сотников Максим - UI/UX Designer" class="member-avatar-image" width="160" height="160" loading="lazy" decoding="async" itemprop="image">
                           <div class="avatar-glow" aria-hidden="true"></div>
                           <div class="avatar-border" aria-hidden="true"></div>
                       </div>
                       <div class="member-info">
                           <h3 itemprop="name">Сотников Максим</h3>
                           <p class="member-role" itemprop="jobTitle">UI/UX Designer</p>
-                          <div class="member-skills" aria-label="Навыки дизайнера">
+                          <div class="member-skills" aria-label="Skills">
                               <span class="skill-tag">Figma</span>
                               <span class="skill-tag">UI/UX</span>
                               <span class="skill-tag">Design Systems</span>
@@ -594,7 +608,7 @@
                       <div class="member-info">
                           <h3 itemprop="name">Карамов Ибрагим</h3>
                           <p class="member-role" itemprop="jobTitle">Project Manager</p>
-                          <div class="member-skills" aria-label="Навыки менеджера">
+                          <div class="member-skills" aria-label="Skills">
                               <span class="skill-tag">Agile</span>
                               <span class="skill-tag">Scrum</span>
                               <span class="skill-tag">Product</span>
@@ -605,14 +619,14 @@
                   
                   <article class="team-member" data-member="java-backend" itemscope itemtype="https://schema.org/Person">
                       <div class="member-avatar-container">
-                         <img src="assets/team_avatars/Danis.webp" alt="Галеев Данис - Backend разработчик" class="member-avatar-image" width="160" height="160" loading="lazy" decoding="async" itemprop="image">
+                         <img src="assets/team_avatars/Danis.webp" alt="Галеев Данис - Backend Developer" class="member-avatar-image" width="160" height="160" loading="lazy" decoding="async" itemprop="image">
                           <div class="avatar-glow" aria-hidden="true"></div>
                           <div class="avatar-border" aria-hidden="true"></div>
                       </div>
                       <div class="member-info">
                           <h3 itemprop="name">Галеев Данис</h3>
                           <p class="member-role" itemprop="jobTitle">Backend Developer</p>
-                          <div class="member-skills" aria-label="Навыки backend разработчика">
+                          <div class="member-skills" aria-label="Skills">
                               <span class="skill-tag">Java</span>
                               <span class="skill-tag">Spring</span>
                               <span class="skill-tag">PostgreSQL</span>
@@ -630,7 +644,7 @@
                       <div class="member-info">
                           <h3 itemprop="name">Хаметшин Ранэль</h3>
                           <p class="member-role" itemprop="jobTitle">Backend/ML Engineer</p>
-                          <div class="member-skills" aria-label="Навыки ML engineer">
+                          <div class="member-skills" aria-label="Skills">
                               <span class="skill-tag">Python</span>
                               <span class="skill-tag">ML</span>
                               <span class="skill-tag">Go</span>
@@ -648,7 +662,7 @@
                       <div class="member-info">
                           <h3 itemprop="name">Замалов Инсаф</h3>
                           <p class="member-role" itemprop="jobTitle">ML Engineer</p>
-                          <div class="member-skills" aria-label="Навыки ML специалиста">
+                          <div class="member-skills" aria-label="Skills">
                               <span class="skill-tag">Machine Learning</span>
                               <span class="skill-tag">Python</span>
                               <span class="skill-tag">Data Science</span>
@@ -659,14 +673,14 @@
                   
                   <article class="team-member" data-member="ui-designer" itemscope itemtype="https://schema.org/Person">
                       <div class="member-avatar-container">
-                         <img src="assets/team_avatars/Aliya.webp" alt="Алия - UI/UX дизайнер" class="member-avatar-image" width="160" height="160" loading="lazy" decoding="async" itemprop="image">
+                         <img src="assets/team_avatars/Aliya.webp" alt="Алия - UI/UX Designer" class="member-avatar-image" width="160" height="160" loading="lazy" decoding="async" itemprop="image">
                           <div class="avatar-glow" aria-hidden="true"></div>
                           <div class="avatar-border" aria-hidden="true"></div>
                       </div>
                       <div class="member-info">
                           <h3 itemprop="name">Алия</h3>
                           <p class="member-role" itemprop="jobTitle">UI/UX Designer</p>
-                          <div class="member-skills" aria-label="Навыки UI/UX дизайнера">
+                          <div class="member-skills" aria-label="Skills">
                               <span class="skill-tag">UI/UX</span>
                               <span class="skill-tag">Figma</span>
                               <span class="skill-tag">Prototyping</span>
@@ -683,48 +697,49 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Свяжитесь с нами</h2>
+            <h2 class="section-title" data-i18n="contact.sectionTitle">Свяжитесь с нами</h2>
             <div class="contact-content">
                 <div class="contact-info" itemscope itemtype="https://schema.org/ContactPoint">
-                    <h3>Готовы обсудить ваш проект?</h3>
-                    <p>Свяжитесь с нашими руководителями проектов для обсуждения технических решений и планирования.</p>
+                    <h3 data-i18n="contact.heading">Готовы обсудить ваш проект?</h3>
+                    <p data-i18n="contact.text">Свяжитесь с нашими руководителями проектов для обсуждения технических решений и планирования.</p>
                     
                     <div class="contact-methods">
                         <div class="contact-method" itemscope itemtype="https://schema.org/Person">
                             <span class="contact-icon pixel-icon pixel-ai" aria-hidden="true"></span>
                             <div>
                                 <strong itemprop="name">Хаметшин Ранэль</strong><br>
-                                <span itemprop="jobTitle">Техническое руководство</span><br>
-                                <a href="https://t.me/KhametshinR" target="_blank" rel="noopener" style="color: var(--primary-color); text-decoration: none;" itemprop="url" aria-label="Связаться с Ранэлем в Telegram">@KhametshinR</a>
+                                <span itemprop="jobTitle" data-i18n="contact.person1Role">Техническое руководство</span><br>
+                                <a href="https://t.me/KhametshinR" target="_blank" rel="noopener" style="color: var(--primary-color); text-decoration: none;" itemprop="url" aria-label="Contact Ranel on Telegram">@KhametshinR</a>
                             </div>
                         </div>
                         <div class="contact-method" itemscope itemtype="https://schema.org/Person">
                             <span class="contact-icon pixel-icon pixel-consulting" aria-hidden="true"></span>
                             <div>
                                 <strong itemprop="name">Карамов Ибрагим</strong><br>
-                                <span itemprop="jobTitle">Управление проектами</span><br>
-                                <a href="https://t.me/Ch0pperrr" target="_blank" rel="noopener" style="color: var(--primary-color); text-decoration: none;" itemprop="url" aria-label="Связаться с Ибрагимом в Telegram">@Ch0pperrr</a>
+                                <span itemprop="jobTitle" data-i18n="contact.person2Role">Управление проектами</span><br>
+                                <a href="https://t.me/Ch0pperrr" target="_blank" rel="noopener" style="color: var(--primary-color); text-decoration: none;" itemprop="url" aria-label="Contact Ibrahim on Telegram">@Ch0pperrr</a>
                             </div>
                         </div>
                         <div class="contact-method">
                             <span class="contact-icon pixel-icon pixel-web" aria-hidden="true"></span>
                             <div>
-                                <strong>Наш канал</strong><br>
-                                <span>Новости и проекты</span><br>
-                                <a href="https://t.me/it_aul" target="_blank" rel="noopener" style="color: var(--primary-color); text-decoration: none;" aria-label="Подписаться на канал IT-AUL в Telegram">@it_aul</a>
+                                <strong data-i18n="contact.channelTitle">Наш канал</strong><br>
+                                <span data-i18n="contact.channelDesc">Новости и проекты</span><br>
+                                <a href="https://t.me/it_aul" target="_blank" rel="noopener" style="color: var(--primary-color); text-decoration: none;" aria-label="IT-AUL Telegram channel">@it_aul</a>
                             </div>
                         </div>
                     </div>
                     <meta itemprop="contactType" content="customer service">
                     <meta itemprop="availableLanguage" content="Russian">
+                    <meta itemprop="availableLanguage" content="English">
                 </div>
                 
-                <form class="contact-form" id="contact-form" aria-label="Форма обратной связи">
-                    <input type="text" name="name" placeholder="Ваше имя" required aria-label="Введите ваше имя">
-                    <input type="email" name="email" placeholder="Email" required aria-label="Введите ваш email">
-                    <input type="text" name="subject" placeholder="Тема проекта" required aria-label="Введите тему проекта">
-                    <textarea name="message" placeholder="Расскажите о вашем проекте" required aria-label="Опишите ваш проект"></textarea>
-                    <button type="submit" class="btn btn-primary" aria-label="Отправить сообщение">Отправить</button>
+                <form class="contact-form" id="contact-form" aria-label="Contact form">
+                    <input type="text" name="name" placeholder="Ваше имя" required data-i18n-placeholder="contact.formName">
+                    <input type="email" name="email" placeholder="Email" required data-i18n-placeholder="contact.formEmail">
+                    <input type="text" name="subject" placeholder="Тема проекта" required data-i18n-placeholder="contact.formSubject">
+                    <textarea name="message" placeholder="Расскажите о вашем проекте" required data-i18n-placeholder="contact.formMessage"></textarea>
+                    <button type="submit" class="btn btn-primary" data-i18n="contact.formSubmit">Отправить</button>
                 </form>
             </div>
             <!-- Static Contact Pixel Decorations -->
@@ -737,13 +752,13 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="assets/images/Frame 9.svg" alt="IT-AUL Логотип" class="logo" width="32" height="32">
+                    <img src="assets/images/Frame 9.svg" alt="IT-AUL Logo" class="logo" width="32" height="32">
                     <span class="logo-text">IT-AUL</span>
                 </div>
-                <p>&copy; 2025 IT-AUL. Все права защищены.</p>
+                <p data-i18n="footer.copyright">&copy; 2025 IT-AUL. Все права защищены.</p>
             </div>
         </div>
     </footer>
 
 </body>
-</html> 
+</html>

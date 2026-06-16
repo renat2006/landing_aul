@@ -42,6 +42,9 @@
     <!-- Language alternatives (hreflang) -->
     <link rel="alternate" hreflang="ru" href="https://it-aul.dev/">
     <link rel="alternate" hreflang="en" href="https://it-aul.dev/?lang=en">
+    <link rel="alternate" hreflang="zh" href="https://it-aul.dev/?lang=zh">
+    <link rel="alternate" hreflang="de" href="https://it-aul.dev/?lang=de">
+    <link rel="alternate" hreflang="es" href="https://it-aul.dev/?lang=es">
     <link rel="alternate" hreflang="x-default" href="https://it-aul.dev/">
     
     <!-- Open Graph / Facebook -->
@@ -56,6 +59,9 @@
     <meta property="og:site_name" content="IT-AUL">
     <meta property="og:locale" content="ru_RU">
     <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta property="og:locale:alternate" content="de_DE">
+    <meta property="og:locale:alternate" content="es_ES">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
@@ -104,7 +110,7 @@
         "https://t.me/KhametshinR",
         "https://t.me/Ch0pperrr"
       ],
-      "knowsLanguage": ["ru", "en"],
+      "knowsLanguage": ["ru", "en", "zh", "de", "es"],
       "makesOffer": [
         {
           "@type": "Offer",
@@ -221,11 +227,16 @@
                 <a href="#contact" class="nav-link" data-i18n="nav.contact">Контакты</a>
             </div>
             <!-- Language Switcher -->
-            <div class="lang-switcher" id="lang-switcher" role="group" aria-label="Language selection">
-                <button class="lang-option active" data-lang="ru" aria-label="Русский">RU</button>
-                <button class="lang-option" data-lang="en" aria-label="English">EN</button>
+            <div class="lang-switcher" id="lang-switcher">
+                <select class="lang-select" id="lang-select" aria-label="Language">
+                    <option value="ru" selected>RU</option>
+                    <option value="en">EN</option>
+                    <option value="zh">ZH</option>
+                    <option value="de">DE</option>
+                    <option value="es">ES</option>
+                </select>
             </div>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Открыть мобильное меню" aria-expanded="false">
+            <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -242,7 +253,7 @@
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-badge">
-                    <span class="badge-icon" aria-hidden="true">🏆</span>
+                    <span class="badge-dot" aria-hidden="true"></span>
                     <span class="badge-text" data-i18n="hero.badge">6 призовых мест · 3 международные выставки</span>
                 </div>
                 
@@ -254,7 +265,7 @@
                 
                 <p class="hero-description">
                     <span data-i18n="hero.descriptionPre">Команда из </span><span class="highlight-text" id="team-count">7</span><span data-i18n="hero.descriptionMid"> разработчиков с призовыми местами на хакатонах </span>
-                    <span class="highlight-text" data-i18n="hero.descriptionHighlight">МТС и Яндекс</span><span data-i18n="hero.descriptionPost">. Строим собственный AI-стартап в сфере туризма. Готовы воплотить вашу идею.</span>
+                    <span class="highlight-text" data-i18n="hero.descriptionHighlight">МТС и Яндекс</span><span data-i18n="hero.descriptionPost">. Строим собственный AI-стартап в сфере туризма.</span>
                 </p>
                 
                 <div class="hero-stats" role="group" aria-label="Статистика команды">
@@ -275,11 +286,11 @@
                 <div class="hero-buttons">
                     <a href="#contact" class="btn btn-primary" aria-label="Start a project">
                         <span class="btn-text" data-i18n="hero.btnOrder">Заказать проект</span>
-                        <span class="btn-icon" aria-hidden="true">→</span>
+                        <span class="btn-arrow" aria-hidden="true"></span>
                     </a>
                     <a href="#services" class="btn btn-secondary" aria-label="View our services">
                         <span class="btn-text" data-i18n="hero.btnServices">Наши услуги</span>
-                        <span class="btn-icon" aria-hidden="true">↗</span>
+                        <span class="btn-arrow" aria-hidden="true"></span>
                     </a>
                 </div>
             </div>
@@ -310,10 +321,10 @@
                         <span>&lt;/&gt;</span>
                     </div>
                     <div class="code-element" style="bottom: 30%; left: 20%;">
-                        <span>💻</span>
+                        <span>fn()</span>
                     </div>
                     <div class="code-element" style="top: 40%; right: 5%;">
-                        <span>⚡</span>
+                        <span>=&gt;</span>
                     </div>
                 </div>
                 
@@ -337,7 +348,7 @@
             <div class="about-grid">
                 <div class="about-text">
                     <h3 data-i18n="about.achievementsTitle">Наши достижения</h3>
-                    <p data-i18n="about.achievementsText">Мы не просто пишем код — мы создаём продукты. Сейчас разрабатываем собственный AI-стартап в сфере туризма. Готовы быстро и качественно воплотить вашу идею в работающий продукт.</p>
+                    <p data-i18n="about.achievementsText">Мы не просто пишем код — мы создаём продукты. Сейчас разрабатываем собственный AI-стартап в сфере туризма.</p>
                     
                     <div class="achievements-section">
                         <div class="achievements-compact">
@@ -570,7 +581,7 @@
                           <div class="avatar-border" aria-hidden="true"></div>
                       </div>
                       <div class="member-info">
-                          <h3 itemprop="name">Губайдуллин Ренат</h3>
+                          <h3 itemprop="name" data-i18n="team.member1Name">Губайдуллин Ренат</h3>
                           <p class="member-role" itemprop="jobTitle">Frontend Developer</p>
                           <div class="member-skills" aria-label="Skills">
                               <span class="skill-tag">React</span>
@@ -588,7 +599,7 @@
                           <div class="avatar-border" aria-hidden="true"></div>
                       </div>
                       <div class="member-info">
-                          <h3 itemprop="name">Сотников Максим</h3>
+                          <h3 itemprop="name" data-i18n="team.member2Name">Сотников Максим</h3>
                           <p class="member-role" itemprop="jobTitle">UI/UX Designer</p>
                           <div class="member-skills" aria-label="Skills">
                               <span class="skill-tag">Figma</span>
@@ -606,7 +617,7 @@
                           <div class="avatar-border" aria-hidden="true"></div>
                       </div>
                       <div class="member-info">
-                          <h3 itemprop="name">Карамов Ибрагим</h3>
+                          <h3 itemprop="name" data-i18n="team.member3Name">Карамов Ибрагим</h3>
                           <p class="member-role" itemprop="jobTitle">Project Manager</p>
                           <div class="member-skills" aria-label="Skills">
                               <span class="skill-tag">Agile</span>
@@ -624,7 +635,7 @@
                           <div class="avatar-border" aria-hidden="true"></div>
                       </div>
                       <div class="member-info">
-                          <h3 itemprop="name">Галеев Данис</h3>
+                          <h3 itemprop="name" data-i18n="team.member4Name">Галеев Данис</h3>
                           <p class="member-role" itemprop="jobTitle">Backend Developer</p>
                           <div class="member-skills" aria-label="Skills">
                               <span class="skill-tag">Java</span>
@@ -642,7 +653,7 @@
                           <div class="avatar-border" aria-hidden="true"></div>
                       </div>
                       <div class="member-info">
-                          <h3 itemprop="name">Хаметшин Ранэль</h3>
+                          <h3 itemprop="name" data-i18n="team.member5Name">Хаметшин Ранэль</h3>
                           <p class="member-role" itemprop="jobTitle">Backend/ML Engineer</p>
                           <div class="member-skills" aria-label="Skills">
                               <span class="skill-tag">Python</span>
@@ -660,7 +671,7 @@
                           <div class="avatar-border" aria-hidden="true"></div>
                       </div>
                       <div class="member-info">
-                          <h3 itemprop="name">Замалов Инсаф</h3>
+                          <h3 itemprop="name" data-i18n="team.member6Name">Замалов Инсаф</h3>
                           <p class="member-role" itemprop="jobTitle">ML Engineer</p>
                           <div class="member-skills" aria-label="Skills">
                               <span class="skill-tag">Machine Learning</span>
@@ -678,7 +689,7 @@
                           <div class="avatar-border" aria-hidden="true"></div>
                       </div>
                       <div class="member-info">
-                          <h3 itemprop="name">Алия</h3>
+                          <h3 itemprop="name" data-i18n="team.member7Name">Алия</h3>
                           <p class="member-role" itemprop="jobTitle">UI/UX Designer</p>
                           <div class="member-skills" aria-label="Skills">
                               <span class="skill-tag">UI/UX</span>
@@ -700,14 +711,14 @@
             <h2 class="section-title" data-i18n="contact.sectionTitle">Свяжитесь с нами</h2>
             <div class="contact-content">
                 <div class="contact-info" itemscope itemtype="https://schema.org/ContactPoint">
-                    <h3 data-i18n="contact.heading">Готовы обсудить ваш проект?</h3>
-                    <p data-i18n="contact.text">Свяжитесь с нашими руководителями проектов для обсуждения технических решений и планирования.</p>
+                    <h3 data-i18n="contact.heading">Обсудим ваш проект</h3>
+                    <p data-i18n="contact.text">Свяжитесь с нашими руководителями для обсуждения технических решений и планирования.</p>
                     
                     <div class="contact-methods">
                         <div class="contact-method" itemscope itemtype="https://schema.org/Person">
                             <span class="contact-icon pixel-icon pixel-ai" aria-hidden="true"></span>
                             <div>
-                                <strong itemprop="name">Хаметшин Ранэль</strong><br>
+                                <strong itemprop="name" data-i18n="contact.person1Name">Хаметшин Ранэль</strong><br>
                                 <span itemprop="jobTitle" data-i18n="contact.person1Role">Техническое руководство</span><br>
                                 <a href="https://t.me/KhametshinR" target="_blank" rel="noopener" style="color: var(--primary-color); text-decoration: none;" itemprop="url" aria-label="Contact Ranel on Telegram">@KhametshinR</a>
                             </div>
@@ -715,7 +726,7 @@
                         <div class="contact-method" itemscope itemtype="https://schema.org/Person">
                             <span class="contact-icon pixel-icon pixel-consulting" aria-hidden="true"></span>
                             <div>
-                                <strong itemprop="name">Карамов Ибрагим</strong><br>
+                                <strong itemprop="name" data-i18n="contact.person2Name">Карамов Ибрагим</strong><br>
                                 <span itemprop="jobTitle" data-i18n="contact.person2Role">Управление проектами</span><br>
                                 <a href="https://t.me/Ch0pperrr" target="_blank" rel="noopener" style="color: var(--primary-color); text-decoration: none;" itemprop="url" aria-label="Contact Ibrahim on Telegram">@Ch0pperrr</a>
                             </div>

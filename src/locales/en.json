@@ -21,7 +21,7 @@
     "descriptionPre": "A team of ",
     "descriptionMid": " developers with prizes at ",
     "descriptionHighlight": "MTS & Yandex",
-    "descriptionPost": " hackathons — Russia's top tech companies. Building our own AI startup in travel tech. Ready to bring your idea to life.",
+    "descriptionPost": " hackathons — Russia’s top tech companies. Building our own AI startup in travel tech.",
     "statWins": "Wins",
     "statHackathons": "Hackathons",
     "statStartup": "Startup",
@@ -32,7 +32,7 @@
   "about": {
     "sectionTitle": "We Win. We Build. We Ship.",
     "achievementsTitle": "Our Track Record",
-    "achievementsText": "We don't just write code — we build products. Currently developing our own AI startup in travel tech. Ready to rapidly turn your idea into a working product.",
+    "achievementsText": "We don’t just write code — we build products. Currently developing our own AI startup in travel tech.",
     "hackathonsHeader": "Hackathons — 6 prizes",
     "exhibitionsHeader": "Exhibitions — 3 events",
     "firstPlace": "1st place",
@@ -97,13 +97,22 @@
     }
   },
   "team": {
-    "sectionTitle": "Our Team"
+    "sectionTitle": "Our Team",
+    "member1Name": "Renat Gubaidullin",
+    "member2Name": "Maxim Sotnikov",
+    "member3Name": "Ibrahim Karamov",
+    "member4Name": "Danis Galeev",
+    "member5Name": "Ranel Khametshin",
+    "member6Name": "Insaf Zamalov",
+    "member7Name": "Aliya"
   },
   "contact": {
     "sectionTitle": "Get In Touch",
-    "heading": "Ready to discuss your project?",
+    "heading": "Let’s discuss your project",
     "text": "Reach out to our project leads to discuss technical solutions and planning.",
+    "person1Name": "Ranel Khametshin",
     "person1Role": "Technical Lead",
+    "person2Name": "Ibrahim Karamov",
     "person2Role": "Project Management",
     "channelTitle": "Our Channel",
     "channelDesc": "News & projects",

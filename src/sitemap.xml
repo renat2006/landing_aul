@@ -11,6 +11,9 @@
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="ru" href="https://it-aul.dev/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://it-aul.dev/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://it-aul.dev/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://it-aul.dev/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://it-aul.dev/?lang=es"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://it-aul.dev/"/>
     
     <image:image>
@@ -70,6 +73,51 @@
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ru" href="https://it-aul.dev/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://it-aul.dev/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://it-aul.dev/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://it-aul.dev/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://it-aul.dev/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://it-aul.dev/"/>
+  </url>
+  
+  <!-- Main page — Chinese -->
+  <url>
+    <loc>https://it-aul.dev/?lang=zh</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://it-aul.dev/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://it-aul.dev/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://it-aul.dev/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://it-aul.dev/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://it-aul.dev/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://it-aul.dev/"/>
+  </url>
+  
+  <!-- Main page — German -->
+  <url>
+    <loc>https://it-aul.dev/?lang=de</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://it-aul.dev/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://it-aul.dev/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://it-aul.dev/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://it-aul.dev/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://it-aul.dev/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://it-aul.dev/"/>
+  </url>
+  
+  <!-- Main page — Spanish -->
+  <url>
+    <loc>https://it-aul.dev/?lang=es</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://it-aul.dev/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://it-aul.dev/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://it-aul.dev/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://it-aul.dev/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://it-aul.dev/?lang=es"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://it-aul.dev/"/>
   </url>
   

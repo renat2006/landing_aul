@@ -5,10 +5,13 @@
 
 import ruLocale from './locales/ru.json';
 import enLocale from './locales/en.json';
+import zhLocale from './locales/zh.json';
+import deLocale from './locales/de.json';
+import esLocale from './locales/es.json';
 
 class I18n {
   constructor() {
-    this.locales = { ru: ruLocale, en: enLocale };
+    this.locales = { ru: ruLocale, en: enLocale, zh: zhLocale, de: deLocale, es: esLocale };
     this.currentLocale = 'ru';
     this.fallbackLocale = 'ru';
     this._listeners = [];
@@ -224,7 +227,10 @@ class I18n {
     if (ogDesc && meta.ogDescription) ogDesc.content = meta.ogDescription;
 
     const ogLocale = document.querySelector('meta[property="og:locale"]');
-    if (ogLocale) ogLocale.content = this.currentLocale === 'en' ? 'en_US' : 'ru_RU';
+    if (ogLocale) {
+      const localeMap = { ru: 'ru_RU', en: 'en_US', zh: 'zh_CN', de: 'de_DE', es: 'es_ES' };
+      ogLocale.content = localeMap[this.currentLocale] || 'ru_RU';
+    }
 
     // Twitter tags
     const twTitle = document.querySelector('meta[property="twitter:title"]');
@@ -238,10 +244,11 @@ class I18n {
    * Update the language switcher UI
    */
   _updateSwitcher() {
-    document.querySelectorAll('.lang-option').forEach(btn => {
-      const lang = btn.getAttribute('data-lang');
-      btn.classList.toggle('active', lang === this.currentLocale);
-    });
+    // Update select dropdown
+    const langSelect = document.getElementById('lang-select');
+    if (langSelect) {
+      langSelect.value = this.currentLocale;
+    }
   }
 }
 

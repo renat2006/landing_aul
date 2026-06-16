@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "title": "IT-AUL — 屡获殊荣的开发团队 | Web、移动端、AI与MVP开发",
+    "description": "IT-AUL — 在MTS和Yandex等俄罗斯顶级技术竞赛中获得6个黑客马拉松奖项的开发团队。AI旅游创业公司创始人。3次国际展览。4-8周快速MVP交付。",
+    "ogTitle": "IT-AUL — 屡获殊荣的开发团队 | Web与移动应用",
+    "ogDescription": "MTS和Yandex黑客马拉松6个奖项。AI旅游科技创业公司创始人。3次国际展览。4-8周快速MVP。",
+    "twitterTitle": "IT-AUL — 屡获殊荣的开发团队",
+    "twitterDescription": "MTS和Yandex黑客马拉松6个奖项。AI创业公司创始人。3次国际展览。"
+  },
+  "nav": {
+    "home": "首页",
+    "about": "关于我们",
+    "services": "服务",
+    "team": "团队",
+    "contact": "联系"
+  },
+  "hero": {
+    "badge": "6个黑客马拉松奖项 · 3次国际展览",
+    "titleAccent": "开发团队",
+    "titleSub": "赢得黑客马拉松，交付产品。",
+    "descriptionPre": "",
+    "descriptionMid": "名开发者，在",
+    "descriptionHighlight": "MTS和Yandex",
+    "descriptionPost": "黑客马拉松中获奖——俄罗斯顶级科技公司。正在打造自己的AI旅游创业项目。",
+    "statWins": "获奖",
+    "statHackathons": "黑客马拉松",
+    "statStartup": "创业项目",
+    "btnOrder": "启动项目",
+    "btnServices": "我们的服务",
+    "scrollMore": "了解更多"
+  },
+  "about": {
+    "sectionTitle": "获胜。创造。交付。",
+    "achievementsTitle": "我们的成绩",
+    "achievementsText": "我们不仅编写代码——我们打造产品。目前正在开发自己的AI旅游创业项目。",
+    "hackathonsHeader": "黑客马拉松 — 6个奖项",
+    "exhibitionsHeader": "展览 — 3场活动",
+    "firstPlace": "第一名",
+    "secondPlace": "第二名",
+    "prize": "获奖",
+    "achievement1Name": "Yandex教育 '25",
+    "achievement1Meta": "2025 • Yandex（俄罗斯领先科技公司）",
+    "achievement2Name": "Tatar.Bu '24",
+    "achievement2Meta": "2024 • 区域数字服务黑客马拉松",
+    "achievement3Name": "Tatar.Bu '25",
+    "achievement3Meta": "2025 • 区域数字服务黑客马拉松",
+    "achievement4Name": "MTS True Tech '25",
+    "achievement4Meta": "2025 • MTS（俄罗斯最大电信公司）",
+    "achievement5Name": "ArtScience '25",
+    "achievement5Meta": "2025 • 艺术与技术黑客马拉松",
+    "exhibition1Name": "喀山数字论坛 '24",
+    "exhibition1Meta": "2024 • AI旅游创业展示",
+    "exhibition2Name": "喀山数字论坛 '25",
+    "exhibition2Meta": "2025 • AI旅游创业展示",
+    "exhibition3Name": "\"Ya v Dele\" '25",
+    "exhibition3Meta": "2025 • 青年创业项目",
+    "statDevelopers": "开发者",
+    "statProjects": "项目",
+    "statExhibitions": "展览"
+  },
+  "services": {
+    "sectionTitle": "我们的服务",
+    "web": {
+      "title": "Web开发",
+      "description": "使用前沿技术构建现代、快速、响应式的Web应用",
+      "list": ["React, JavaScript, Next.js", "PWA, 响应式设计", "现代UI框架"]
+    },
+    "mobile": {
+      "title": "移动应用",
+      "description": "iOS和Android跨平台移动应用——一套代码，全平台覆盖",
+      "list": ["Flutter, React Native", "渐进式Web应用", "跨平台开发"]
+    },
+    "mvp": {
+      "title": "快速MVP开发",
+      "description": "4-8周交付MVP。黑客马拉松磨练的速度，自有创业验证的品质",
+      "list": ["4-8周从创意到上线", "假设验证", "产品优先方法"]
+    },
+    "design": {
+      "title": "UI/UX设计",
+      "description": "直观、视觉出众的用户界面，提升参与度",
+      "list": ["Figma, 响应式设计", "品牌, 原型设计", "用户研究"]
+    },
+    "consulting": {
+      "title": "咨询与分析",
+      "description": "产品分析、技术专业知识和项目规划",
+      "list": ["产品分析", "技术咨询", "Agile, Scrum"]
+    },
+    "ai": {
+      "title": "机器学习与AI",
+      "description": "AI代理、个性化和ML集成。拥有真实AI创业经验",
+      "list": ["LangChain, AI代理", "个性化与推荐", "Python ML, Go"]
+    },
+    "backend": {
+      "title": "后端开发",
+      "description": "现代可扩展架构的可靠服务端解决方案",
+      "list": ["Java Spring, Python, Go", "REST API", "数据库设计"]
+    }
+  },
+  "team": {
+    "sectionTitle": "我们的团队",
+    "member1Name": "Renat Gubaidullin",
+    "member2Name": "Maxim Sotnikov",
+    "member3Name": "Ibrahim Karamov",
+    "member4Name": "Danis Galeev",
+    "member5Name": "Ranel Khametshin",
+    "member6Name": "Insaf Zamalov",
+    "member7Name": "Aliya"
+  },
+  "contact": {
+    "sectionTitle": "联系我们",
+    "heading": "讨论您的项目",
+    "text": "联系我们的项目负责人，讨论技术方案和规划。",
+    "person1Name": "Ranel Khametshin",
+    "person1Role": "技术负责人",
+    "person2Name": "Ibrahim Karamov",
+    "person2Role": "项目管理",
+    "channelTitle": "我们的频道",
+    "channelDesc": "新闻与项目",
+    "formName": "您的姓名",
+    "formEmail": "电子邮件",
+    "formSubject": "项目主题",
+    "formMessage": "介绍您的项目",
+    "formSubmit": "发送消息",
+    "formSending": "发送中...",
+    "formSuccess": "邮件客户端已打开！发送消息即可联系我们。",
+    "emailSubjectPrefix": "新咨询来自",
+    "emailBodyName": "姓名",
+    "emailBodyEmail": "电子邮件",
+    "emailBodySubject": "主题",
+    "emailBodyMessage": "消息",
+    "emailBodyFooter": "发自IT-AUL官网"
+  },
+  "footer": {
+    "copyright": "© 2025 IT-AUL. 保留所有权利。"
+  }
+}

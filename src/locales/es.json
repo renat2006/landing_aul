@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "title": "IT-AUL — Equipo de desarrollo galardonado | Web, Mobile, AI y MVP",
+    "description": "IT-AUL — equipo de desarrollo con 6 premios en hackathons de MTS y Yandex. Fundadores de startup de AI en turismo. 3 exposiciones internacionales. MVP en 4–8 semanas.",
+    "ogTitle": "IT-AUL — Equipo de desarrollo galardonado | Web y Apps móviles",
+    "ogDescription": "6 premios en hackathons de MTS y Yandex. Fundadores de startup de AI en turismo. 3 exposiciones internacionales. MVP en 4–8 semanas.",
+    "twitterTitle": "IT-AUL — Equipo de desarrollo galardonado",
+    "twitterDescription": "6 premios en hackathons de MTS y Yandex. Fundadores de startup de AI. 3 exposiciones internacionales."
+  },
+  "nav": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "services": "Servicios",
+    "team": "Equipo",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "badge": "6 premios en hackathons · 3 exposiciones internacionales",
+    "titleAccent": "Dev Team",
+    "titleSub": "Ganamos hackathons. Entregamos productos.",
+    "descriptionPre": "Un equipo de ",
+    "descriptionMid": " desarrolladores con premios en hackathons de ",
+    "descriptionHighlight": "MTS y Yandex",
+    "descriptionPost": " — las principales empresas tecnológicas de Rusia. Estamos construyendo nuestra propia startup de AI en turismo.",
+    "statWins": "Victorias",
+    "statHackathons": "Hackathons",
+    "statStartup": "Startup",
+    "btnOrder": "Iniciar proyecto",
+    "btnServices": "Nuestros servicios",
+    "scrollMore": "Saber más"
+  },
+  "about": {
+    "sectionTitle": "Ganamos. Creamos. Entregamos.",
+    "achievementsTitle": "Nuestro historial",
+    "achievementsText": "No solo escribimos código — construimos productos. Actualmente desarrollamos nuestra propia startup de AI en turismo.",
+    "hackathonsHeader": "Hackathons — 6 premios",
+    "exhibitionsHeader": "Exposiciones — 3 eventos",
+    "firstPlace": "1er lugar",
+    "secondPlace": "2do lugar",
+    "prize": "Premio",
+    "achievement1Name": "Yandex Education '25",
+    "achievement1Meta": "2025 • Yandex (empresa líder de tecnología en Rusia)",
+    "achievement2Name": "Tatar.Bu '24",
+    "achievement2Meta": "2024 • Hackathon regional de servicios digitales",
+    "achievement3Name": "Tatar.Bu '25",
+    "achievement3Meta": "2025 • Hackathon regional de servicios digitales",
+    "achievement4Name": "MTS True Tech '25",
+    "achievement4Meta": "2025 • MTS (mayor telecomunicadora de Rusia)",
+    "achievement5Name": "ArtScience '25",
+    "achievement5Meta": "2025 • Hackathon de arte y tecnología",
+    "exhibition1Name": "Kazan Digital Forum '24",
+    "exhibition1Meta": "2024 • Showcase de startup AI en turismo",
+    "exhibition2Name": "Kazan Digital Forum '25",
+    "exhibition2Meta": "2025 • Showcase de startup AI en turismo",
+    "exhibition3Name": "\"Ya v Dele\" '25",
+    "exhibition3Meta": "2025 • Programa de emprendimiento juvenil",
+    "statDevelopers": "Desarrolladores",
+    "statProjects": "Proyectos",
+    "statExhibitions": "Exposiciones"
+  },
+  "services": {
+    "sectionTitle": "Nuestros servicios",
+    "web": {
+      "title": "Desarrollo Web",
+      "description": "Aplicaciones web modernas, rápidas y responsivas con tecnologías de vanguardia",
+      "list": ["React, JavaScript, Next.js", "PWA, diseño responsivo", "Bibliotecas UI modernas"]
+    },
+    "mobile": {
+      "title": "Aplicaciones móviles",
+      "description": "Apps móviles multiplataforma para iOS y Android — un código, todas las plataformas",
+      "list": ["Flutter, React Native", "Progressive Web Apps", "Desarrollo multiplataforma"]
+    },
+    "mvp": {
+      "title": "Desarrollo rápido de MVP",
+      "description": "MVP en 4–8 semanas. Velocidad perfeccionada en hackathons y probada con nuestra startup",
+      "list": ["De la idea al lanzamiento en 4–8 semanas", "Validación de hipótesis", "Enfoque product-first"]
+    },
+    "design": {
+      "title": "Diseño UI/UX",
+      "description": "Interfaces de usuario intuitivas y visualmente impactantes",
+      "list": ["Figma, diseño responsivo", "Branding, prototipado", "Investigación de usuarios"]
+    },
+    "consulting": {
+      "title": "Consultoría y analítica",
+      "description": "Análisis de producto, experiencia técnica y planificación de proyectos",
+      "list": ["Analítica de producto", "Consultoría técnica", "Agile, Scrum"]
+    },
+    "ai": {
+      "title": "Machine Learning e IA",
+      "description": "Agentes de IA, personalización e integración de ML. Respaldado por experiencia real de startup",
+      "list": ["LangChain, agentes de IA", "Personalización y recomendaciones", "Python ML, Go"]
+    },
+    "backend": {
+      "title": "Desarrollo Backend",
+      "description": "Soluciones server-side confiables con arquitectura moderna y escalable",
+      "list": ["Java Spring, Python, Go", "REST API", "Diseño de bases de datos"]
+    }
+  },
+  "team": {
+    "sectionTitle": "Nuestro equipo",
+    "member1Name": "Renat Gubaidullin",
+    "member2Name": "Maxim Sotnikov",
+    "member3Name": "Ibrahim Karamov",
+    "member4Name": "Danis Galeev",
+    "member5Name": "Ranel Khametshin",
+    "member6Name": "Insaf Zamalov",
+    "member7Name": "Aliya"
+  },
+  "contact": {
+    "sectionTitle": "Contacto",
+    "heading": "Hablemos de tu proyecto",
+    "text": "Contacta con nuestros líderes de proyecto para discutir soluciones técnicas y planificación.",
+    "person1Name": "Ranel Khametshin",
+    "person1Role": "Líder técnico",
+    "person2Name": "Ibrahim Karamov",
+    "person2Role": "Gestión de proyectos",
+    "channelTitle": "Nuestro canal",
+    "channelDesc": "Noticias y proyectos",
+    "formName": "Tu nombre",
+    "formEmail": "Email",
+    "formSubject": "Tema del proyecto",
+    "formMessage": "Cuéntanos sobre tu proyecto",
+    "formSubmit": "Enviar mensaje",
+    "formSending": "Enviando...",
+    "formSuccess": "¡Cliente de email abierto! Envía el mensaje para contactarnos.",
+    "emailSubjectPrefix": "Nueva consulta de",
+    "emailBodyName": "Nombre",
+    "emailBodyEmail": "Email",
+    "emailBodySubject": "Asunto",
+    "emailBodyMessage": "Mensaje",
+    "emailBodyFooter": "Enviado desde el sitio web de IT-AUL"
+  },
+  "footer": {
+    "copyright": "© 2025 IT-AUL. Todos los derechos reservados."
+  }
+}

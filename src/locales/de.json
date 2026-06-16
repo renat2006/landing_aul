@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "title": "IT-AUL — Preisgekröntes Entwicklerteam | Web, Mobile, AI & MVP",
+    "description": "IT-AUL — Entwicklerteam mit 6 Hackathon-Preisen bei MTS und Yandex. AI-Startup-Gründer im Reisebereich. 3 internationale Ausstellungen. MVP in 4–8 Wochen.",
+    "ogTitle": "IT-AUL — Preisgekröntes Entwicklerteam | Web & Mobile Apps",
+    "ogDescription": "6 Hackathon-Preise bei MTS & Yandex. AI-Startup-Gründer. 3 internationale Ausstellungen. MVP in 4–8 Wochen.",
+    "twitterTitle": "IT-AUL — Preisgekröntes Entwicklerteam",
+    "twitterDescription": "6 Hackathon-Preise bei MTS & Yandex. AI-Startup-Gründer. 3 internationale Ausstellungen."
+  },
+  "nav": {
+    "home": "Start",
+    "about": "Über uns",
+    "services": "Leistungen",
+    "team": "Team",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "badge": "6 Hackathon-Preise · 3 internationale Ausstellungen",
+    "titleAccent": "Dev Team",
+    "titleSub": "Hackathons gewinnen. Produkte liefern.",
+    "descriptionPre": "Ein Team von ",
+    "descriptionMid": " Entwicklern mit Preisen bei ",
+    "descriptionHighlight": "MTS & Yandex",
+    "descriptionPost": " Hackathons — Russlands führende Tech-Unternehmen. Wir bauen unser eigenes AI-Startup im Reisebereich.",
+    "statWins": "Siege",
+    "statHackathons": "Hackathons",
+    "statStartup": "Startup",
+    "btnOrder": "Projekt starten",
+    "btnServices": "Unsere Leistungen",
+    "scrollMore": "Mehr erfahren"
+  },
+  "about": {
+    "sectionTitle": "Wir gewinnen. Wir bauen. Wir liefern.",
+    "achievementsTitle": "Unsere Erfolge",
+    "achievementsText": "Wir schreiben nicht nur Code — wir bauen Produkte. Derzeit entwickeln wir unser eigenes AI-Startup im Reisebereich.",
+    "hackathonsHeader": "Hackathons — 6 Preise",
+    "exhibitionsHeader": "Ausstellungen — 3 Events",
+    "firstPlace": "1. Platz",
+    "secondPlace": "2. Platz",
+    "prize": "Preis",
+    "achievement1Name": "Yandex Education '25",
+    "achievement1Meta": "2025 • Yandex (Russlands führendes Tech-Unternehmen)",
+    "achievement2Name": "Tatar.Bu '24",
+    "achievement2Meta": "2024 • Regionaler Digitalservices-Hackathon",
+    "achievement3Name": "Tatar.Bu '25",
+    "achievement3Meta": "2025 • Regionaler Digitalservices-Hackathon",
+    "achievement4Name": "MTS True Tech '25",
+    "achievement4Meta": "2025 • MTS (Russlands größter Telekommunikationsanbieter)",
+    "achievement5Name": "ArtScience '25",
+    "achievement5Meta": "2025 • Kunst & Technologie Hackathon",
+    "exhibition1Name": "Kazan Digital Forum '24",
+    "exhibition1Meta": "2024 • AI Reise-Startup Showcase",
+    "exhibition2Name": "Kazan Digital Forum '25",
+    "exhibition2Meta": "2025 • AI Reise-Startup Showcase",
+    "exhibition3Name": "\"Ya v Dele\" '25",
+    "exhibition3Meta": "2025 • Jugend-Unternehmerprogramm",
+    "statDevelopers": "Entwickler",
+    "statProjects": "Projekte",
+    "statExhibitions": "Ausstellungen"
+  },
+  "services": {
+    "sectionTitle": "Unsere Leistungen",
+    "web": {
+      "title": "Webentwicklung",
+      "description": "Moderne, schnelle und responsive Webanwendungen mit neuesten Technologien",
+      "list": ["React, JavaScript, Next.js", "PWA, Responsive Design", "Moderne UI-Bibliotheken"]
+    },
+    "mobile": {
+      "title": "Mobile Apps",
+      "description": "Plattformübergreifende mobile Apps für iOS und Android — eine Codebasis, alle Plattformen",
+      "list": ["Flutter, React Native", "Progressive Web Apps", "Cross-Platform-Entwicklung"]
+    },
+    "mvp": {
+      "title": "Schnelle MVP-Entwicklung",
+      "description": "MVP in 4–8 Wochen. Geschwindigkeit, perfektioniert bei Hackathons und bewährt mit unserem Startup",
+      "list": ["Von der Idee zum Launch in 4–8 Wochen", "Hypothesenvalidierung", "Product-First-Ansatz"]
+    },
+    "design": {
+      "title": "UI/UX Design",
+      "description": "Intuitive, visuell beeindruckende Benutzeroberflächen für mehr Engagement",
+      "list": ["Figma, Responsive Design", "Branding, Prototyping", "User Research"]
+    },
+    "consulting": {
+      "title": "Beratung & Analyse",
+      "description": "Produktanalyse, technische Expertise und Projektplanung",
+      "list": ["Produktanalyse", "Technische Beratung", "Agile, Scrum"]
+    },
+    "ai": {
+      "title": "Machine Learning & AI",
+      "description": "AI-Agenten, Personalisierung und ML-Integration. Unterstützt durch echte Startup-Erfahrung",
+      "list": ["LangChain, AI-Agenten", "Personalisierung & Empfehlungen", "Python ML, Go"]
+    },
+    "backend": {
+      "title": "Backend-Entwicklung",
+      "description": "Zuverlässige serverseitige Lösungen mit moderner, skalierbarer Architektur",
+      "list": ["Java Spring, Python, Go", "REST API", "Datenbankdesign"]
+    }
+  },
+  "team": {
+    "sectionTitle": "Unser Team",
+    "member1Name": "Renat Gubaidullin",
+    "member2Name": "Maxim Sotnikov",
+    "member3Name": "Ibrahim Karamov",
+    "member4Name": "Danis Galeev",
+    "member5Name": "Ranel Khametshin",
+    "member6Name": "Insaf Zamalov",
+    "member7Name": "Aliya"
+  },
+  "contact": {
+    "sectionTitle": "Kontakt",
+    "heading": "Besprechen wir Ihr Projekt",
+    "text": "Kontaktieren Sie unsere Projektleiter für technische Lösungen und Planung.",
+    "person1Name": "Ranel Khametshin",
+    "person1Role": "Technische Leitung",
+    "person2Name": "Ibrahim Karamov",
+    "person2Role": "Projektmanagement",
+    "channelTitle": "Unser Kanal",
+    "channelDesc": "Neuigkeiten & Projekte",
+    "formName": "Ihr Name",
+    "formEmail": "E-Mail",
+    "formSubject": "Projektthema",
+    "formMessage": "Erzählen Sie uns von Ihrem Projekt",
+    "formSubmit": "Nachricht senden",
+    "formSending": "Wird gesendet...",
+    "formSuccess": "E-Mail-Client geöffnet! Senden Sie die Nachricht, um uns zu kontaktieren.",
+    "emailSubjectPrefix": "Neue Anfrage von",
+    "emailBodyName": "Name",
+    "emailBodyEmail": "E-Mail",
+    "emailBodySubject": "Betreff",
+    "emailBodyMessage": "Nachricht",
+    "emailBodyFooter": "Gesendet von der IT-AUL Website"
+  },
+  "footer": {
+    "copyright": "© 2025 IT-AUL. Alle Rechte vorbehalten."
+  }
+}

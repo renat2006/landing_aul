@@ -1,0 +1,54 @@
+# ===========================================
+# Cloudflare Pages Headers
+# Equivalent to netlify.toml [[headers]]
+# ===========================================
+
+# Global security headers
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Content-Language: ru, en
+  Vary: Accept-Language
+
+# HTML — always revalidate (so new deploys take effect immediately)
+/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# JS bundles with content-hash — cache forever
+/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# CSS bundles with content-hash — cache forever
+/css/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Images — cache forever (content-hashed)
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Static assets — cache forever
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Fonts — cache forever
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Favicons and manifest
+/site.webmanifest
+  Cache-Control: public, max-age=86400
+  Content-Type: application/manifest+json
+
+# Robots and sitemap — short cache
+/robots.txt
+  Cache-Control: public, max-age=86400
+
+/sitemap.xml
+  Cache-Control: public, max-age=86400
+  Content-Type: application/xml

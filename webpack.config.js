@@ -153,7 +153,7 @@ module.exports = (env, argv) => {
         } : false,
       }),
 
-      // Copy SEO and PWA files
+      // Copy SEO, PWA, and Cloudflare Pages config files
       new CopyWebpackPlugin({
         patterns: [
           {
@@ -167,6 +167,16 @@ module.exports = (env, argv) => {
           {
             from: 'src/site.webmanifest',
             to: 'site.webmanifest'
+          },
+          {
+            from: 'src/_headers',
+            to: '_headers',
+            toType: 'file'
+          },
+          {
+            from: 'src/_redirects',
+            to: '_redirects',
+            toType: 'file'
           }
         ]
       }),

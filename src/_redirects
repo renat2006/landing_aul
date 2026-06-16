@@ -1,0 +1,10 @@
+# Cloudflare Pages Redirects
+# SPA fallback — serve index.html for all routes
+
+# SEO files (serve as-is, don't redirect)
+/robots.txt    /robots.txt    200
+/sitemap.xml   /sitemap.xml   200
+/site.webmanifest /site.webmanifest 200
+
+# SPA catch-all — return index.html for any route
+/*    /index.html    200
